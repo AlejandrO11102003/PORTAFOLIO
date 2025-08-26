@@ -21,256 +21,6 @@
             --font-main: 'Montserrat', sans-serif;
             --font-tech: 'Orbitron', sans-serif;
         }
-        /* MODO CLARO */
-        .light-theme {
-            --dark-bg: #ffffff;
-            --darker-bg: #f0f0f0;
-            --text-color: #000000;
-            --text-secondary: #333333;
-            --card-bg: #f8f8f8;
-            --primary-color: #000000;
-            --secondary-color: #333333;
-            --accent-color: #000000;
-            --neon-effect: 0 0 15px rgba(0, 0, 0, 0.2);
-            --neon-blue: 0 0 10px rgba(0, 0, 0, 0.1);
-            --font-main: 'Montserrat', Arial, sans-serif;
-            --font-tech: 'Montserrat', Arial, sans-serif;
-        }
-        .light-theme body, .light-theme * {
-            font-family: var(--font-main) !important;
-        }
-        .light-theme .logo, .light-theme .footer-logo {
-            font-family: var(--font-tech) !important;
-            letter-spacing: 1px;
-        }
-        .light-theme .btn,
-        .light-theme .btn-outline,
-        .light-theme .submit-btn {
-            background: var(--dark-bg) !important;
-            color: var(--primary-color) !important;
-            border: 2px solid var(--primary-color) !important;
-            box-shadow: 0 0 20px rgba(0,0,0,0.3) !important;
-        }
-        .light-theme .btn:hover,
-        .light-theme .btn-outline:hover,
-        .light-theme .submit-btn:hover {
-            background: var(--primary-color) !important;
-            color: var(--dark-bg) !important;
-            box-shadow: 0 0 30px rgba(0,0,0,0.5) !important;
-        }
-        .light-theme .section-title h2 {
-            font-family: var(--font-tech) !important;
-            color: var(--primary-color) !important;
-            text-shadow: 0 0 10px rgba(0,0,0,0.1) !important;
-        }
-        .light-theme .service-card,
-        .light-theme .project-card,
-        .light-theme .contact-card,
-        .light-theme .about-image-container,
-        .light-theme .hero-image-container {
-            background-color: var(--card-bg) !important;
-            border: 1px solid var(--secondary-color) !important;
-            box-shadow: 0 0 30px rgba(0,0,0,0.1) !important;
-        }
-        .light-theme .tech-item,
-        .light-theme .skill-item {
-            background-color: var(--card-bg) !important;
-            border: 1px solid var(--secondary-color) !important;
-            color: var(--primary-color) !important;
-        }
-        .light-theme .tech-item:hover,
-        .light-theme .skill-item:hover {
-            background-color: var(--primary-color) !important;
-            color: var(--dark-bg) !important;
-        }
-        .light-theme .navbar,
-        .light-theme header,
-        .light-theme footer {
-            background: var(--dark-bg) !important;
-            border-color: var(--darker-bg) !important;
-            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1) !important;
-        }
-        .light-theme .logo::after,
-        .light-theme .footer-logo::after,
-        .light-theme .section-title h2::after {
-            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color)) !important;
-        }
-        .light-theme .hero {
-            background: linear-gradient(to bottom, var(--dark-bg), var(--darker-bg)) !important;
-        }
-        .light-theme .section::before {
-            background: linear-gradient(to bottom, var(--dark-bg), var(--darker-bg)) !important;
-            opacity: 1 !important;
-        }
-        .light-theme .project-links a,
-        .light-theme .footer-social a,
-        .light-theme .social-links a {
-            background: var(--card-bg) !important;
-            border: 1px solid var(--secondary-color) !important;
-            box-shadow: 0 0 10px rgba(0,0,0,0.05) !important;
-            color: var(--primary-color) !important;
-        }
-        .light-theme .project-links a:hover,
-        .light-theme .footer-social a:hover,
-        .light-theme .social-links a:hover {
-            background: var(--primary-color) !important;
-            color: var(--dark-bg) !important;
-        }
-        .light-theme .glow-effect {
-            background: radial-gradient(circle, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0) 70%) !important;
-            filter: blur(30px) !important;
-        }
-        .light-theme .glow-effect:nth-child(2) {
-            background: radial-gradient(circle, rgba(0,0,0,0.03) 0%, rgba(0,0,0,0) 70%) !important;
-        }
-        .light-theme .logo i,
-        .light-theme .footer-logo i,
-        .light-theme .nav-links a i,
-        .light-theme .btn i,
-        .light-theme .project-links a i,
-        .light-theme .service-icon i,
-        .light-theme .skill-item i,
-        .light-theme .contact-card h3 i,
-        .light-theme .contact-details p i,
-        .light-theme .footer-social a i {
-            color: #ffffff !important; /* Íconos negros sobre fondo blanco */
-            filter: none !important;
-            opacity: 1 !important;
-        }
-        /* Íconos del panel de cambio de tema en modo claro */
-        .light-theme [data-theme] i {
-            color: #ffffff !important; /* Íconos negros para los botones del panel en modo claro */
-        }
-        /* MODO OSCURO DIFERENCIADO */
-        .dark-theme {
-            --dark-bg: #101010;
-            --darker-bg: #000000;
-            --text-color: #ffffff;
-            --text-secondary: #cccccc;
-            --card-bg: #181818;
-            --primary-color: #ffffff;
-            --secondary-color: #ffffff;
-            --accent-color: #ffffff;
-            --neon-effect: 0 0 15px #fff;
-            --neon-blue: 0 0 10px #fff;
-            --font-main: 'Montserrat', sans-serif;
-            --font-tech: 'Orbitron', sans-serif;
-        }
-        .dark-theme body, .dark-theme * {
-            font-family: var(--font-main) !important;
-        }
-        .dark-theme .logo, .dark-theme .footer-logo {
-            font-family: var(--font-tech) !important;
-            letter-spacing: 1px;
-        }
-        .dark-theme .btn, .dark-theme .btn-outline {
-            font-family: var(--font-tech) !important;
-            border-radius: 8px !important;
-            box-shadow: 0 0 20px #fff !important;
-            background: #101010 !important;
-            color: #fff !important;
-            border: 2px solid #fff !important;
-        }
-        .dark-theme .btn:hover, .dark-theme .btn-outline:hover {
-            background: #fff !important;
-            color: #101010 !important;
-            box-shadow: 0 0 30px #fff !important;
-        }
-        .dark-theme .section-title h2 {
-            font-family: var(--font-tech) !important;
-            color: #fff !important;
-            text-shadow: 0 0 10px #fff !important;
-        }
-        .dark-theme .service-card,
-        .dark-theme .project-card,
-        .dark-theme .contact-card,
-        .dark-theme .about-image-container,
-        .dark-theme .hero-image-container {
-            box-shadow: 0 0 30px 0 #000, 0 0 0 0 #fff !important;
-            border: 1px solid #fff !important;
-            background-color: #181818 !important;
-        }
-        .dark-theme .tech-item,
-        .dark-theme .skill-item {
-            background-color: rgba(255,255,255,0.08) !important;
-            border: 1px solid #fff !important;
-            color: #fff !important;
-        }
-        .dark-theme .tech-item:hover,
-        .dark-theme .skill-item:hover {
-            background-color: rgba(255,255,255,0.18) !important;
-            color: #101010 !important;
-        }
-        .dark-theme .navbar,
-        .dark-theme header,
-        .dark-theme footer {
-            background: #101010 !important;
-            border-color: #fff !important;
-            box-shadow: none !important;
-        }
-        .dark-theme .logo::after,
-        .dark-theme .footer-logo::after,
-        .dark-theme .section-title h2::after {
-            background: linear-gradient(90deg, #fff, #fff) !important;
-        }
-        .dark-theme .hero {
-            background: linear-gradient(to bottom, #101010 95%, #181818 70%) !important;
-        }
-        .dark-theme .section::before {
-            background: linear-gradient(to bottom, #101010, #181818) !important;
-            opacity: 1 !important;
-        }
-        .dark-theme .project-links a,
-        .dark-theme .footer-social a,
-        .dark-theme .social-links a {
-            border: 1px solid #fff !important;
-            box-shadow: 0 0 10px #fff !important;
-            background: #181818 !important;
-            color: #fff !important;
-        }
-        .dark-theme .project-links a:hover,
-        .dark-theme .footer-social a:hover,
-        .dark-theme .social-links a:hover {
-            background: #ffffff !important;
-            color: #101010 !important;
-        }
-        .dark-theme .glow-effect {
-            background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 70%) !important;
-            filter: blur(40px) !important;
-        }
-        .dark-theme .glow-effect:nth-child(2) {
-            background: radial-gradient(circle, rgba(255,255,255,0.10) 0%, rgba(255,255,255,0) 70%) !important;
-        }
-        .dark-theme .logo i,
-        .dark-theme .footer-logo i,
-        .dark-theme .nav-links a i,
-        .dark-theme .btn i,
-        .dark-theme .project-links a i,
-        .dark-theme .service-icon i,
-        .dark-theme .skill-item i,
-        .dark-theme .contact-card h3 i,
-        .dark-theme .contact-details p i,
-        .dark-theme .footer-social a i {
-            color: #fff !important;
-            filter: none !important;
-            opacity: 1 !important;
-        }
-        .hacker-accent {
-            color: var(--hacker-accent, #00eaff);
-            text-shadow: 0 0 8px #00eaff, 0 0 2px #00eaff;
-            font-weight: bold;
-        }
-        .blink {
-            animation: blink 1.2s steps(2, start) infinite;
-        }
-        @keyframes blink {
-            to { visibility: hidden; }
-        }
-        .hacker-theme .hacker-accent {
-            --hacker-accent: #00eaff;
-            color: #00eaff !important;
-            text-shadow: 0 0 8px #00eaff, 0 0 2px #00eaff;
-        }
 
         * {
             margin: 0;
@@ -368,15 +118,6 @@
                 transform: scale(1.2);
                 opacity: 0.8;
             }
-        }
-
-        /* Glow effect para modo hacker (negro) */
-        .hacker-theme .glow-effect {
-            background: radial-gradient(circle, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0) 70%) !important;
-            filter: blur(50px) !important;
-        }
-        .hacker-theme .glow-effect:nth-child(2) {
-            background: radial-gradient(circle, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0) 70%) !important;
         }
 
         .container {
@@ -1634,6 +1375,346 @@
                 height: 300px;
             }
         }
+
+        /* --- MODO CLARO --- */
+        .light-theme {
+            --dark-bg: #ffffff;
+            --darker-bg: #f0f0f0;
+            --text-color: #000000;
+            --text-secondary: #333333;
+            --card-bg: #f8f8f8;
+            --primary-color: #000000;
+            --secondary-color: #333333;
+            --accent-color: #000000;
+            --neon-effect: 0 0 15px rgba(0, 0, 0, 0.2);
+            --neon-blue: 0 0 10px rgba(0, 0, 0, 0.1);
+            --font-main: 'Montserrat', Arial, sans-serif;
+            --font-tech: 'Montserrat', Arial, sans-serif;
+        }
+        .light-theme body, .light-theme * {
+            font-family: var(--font-main) !important;
+        }
+        .light-theme .logo, .light-theme .footer-logo {
+            font-family: var(--font-tech) !important;
+            letter-spacing: 1px;
+        }
+        .light-theme .btn,
+        .light-theme .btn-outline,
+        .light-theme .submit-btn {
+            background: var(--dark-bg) !important;
+            color: var(--primary-color) !important;
+            border: 2px solid var(--primary-color) !important;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3) !important;
+        }
+        .light-theme .btn:hover,
+        .light-theme .btn-outline:hover,
+        .light-theme .submit-btn:hover {
+            background: var(--primary-color) !important;
+            color: var(--dark-bg) !important;
+            box-shadow: 0 0 30px rgba(0,0,0,0.5) !important;
+        }
+        .light-theme .section-title h2 {
+            font-family: var(--font-tech) !important;
+            color: var(--primary-color) !important;
+            text-shadow: 0 0 10px rgba(0,0,0,0.1) !important;
+        }
+        .light-theme .service-card,
+        .light-theme .project-card,
+        .light-theme .contact-card,
+        .light-theme .about-image-container,
+        .light-theme .hero-image-container {
+            background-color: var(--card-bg) !important;
+            border: 1px solid var(--secondary-color) !important;
+            box-shadow: 0 0 30px rgba(0,0,0,0.1) !important;
+        }
+        .light-theme .tech-item,
+        .light-theme .skill-item {
+            background-color: var(--card-bg) !important;
+            border: 1px solid var(--secondary-color) !important;
+            color: var(--primary-color) !important;
+        }
+        .light-theme .tech-item:hover,
+        .light-theme .skill-item:hover {
+            background-color: var(--primary-color) !important;
+            color: var(--dark-bg) !important;
+        }
+        .light-theme .navbar,
+        .light-theme header,
+        .light-theme footer {
+            background: var(--dark-bg) !important;
+            border-color: var(--darker-bg) !important;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1) !important;
+        }
+        .light-theme .logo::after,
+        .light-theme .footer-logo::after,
+        .light-theme .section-title h2::after {
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color)) !important;
+        }
+        .light-theme .hero {
+            background: linear-gradient(to bottom, var(--dark-bg), var(--darker-bg)) !important;
+        }
+        .light-theme .section::before {
+            background: linear-gradient(to bottom, var(--dark-bg), var(--darker-bg)) !important;
+            opacity: 1 !important;
+        }
+        .light-theme .project-links a,
+        .light-theme .footer-social a,
+        .light-theme .social-links a {
+            background: var(--card-bg) !important;
+            border: 1px solid var(--secondary-color) !important;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05) !important;
+            color: var(--primary-color) !important;
+        }
+        .light-theme .project-links a:hover,
+        .light-theme .footer-social a:hover,
+        .light-theme .social-links a:hover {
+            background: var(--primary-color) !important;
+            color: var(--dark-bg) !important;
+        }
+        .light-theme .glow-effect {
+            background: radial-gradient(circle, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0) 70%) !important;
+            filter: blur(30px) !important;
+        }
+        .light-theme .glow-effect:nth-child(2) {
+            background: radial-gradient(circle, rgba(0,0,0,0.03) 0%, rgba(0,0,0,0) 70%) !important;
+        }
+        .light-theme .logo i,
+        .light-theme .footer-logo i,
+        .light-theme .nav-links a i,
+        .light-theme .btn i,
+        .light-theme .project-links a i,
+        .light-theme .service-icon i,
+        .light-theme .skill-item i,
+        .light-theme .contact-card h3 i,
+        .light-theme .contact-details p i,
+        .light-theme .footer-social a i {
+            color: #ffffff !important;
+            filter: none !important;
+            opacity: 1 !important;
+        }
+        /* Íconos del panel de cambio de tema en modo claro */
+        .light-theme [data-theme] i {
+            color: #ffffff !important;
+        }
+        .light-theme .skill-item i{
+            color: #000000 !important;
+        }
+        .light-theme .service-icon i {
+            color: #ffffff !important;
+        }
+
+        /* --- MODO OSCURO DIFERENCIADO --- */
+        .dark-theme {
+            --dark-bg: #101010;
+            --darker-bg: #000000;
+            --text-color: #ffffff;
+            --text-secondary: #cccccc;
+            --card-bg: #181818;
+            --primary-color: #ffffff;
+            --secondary-color: #ffffff;
+            --accent-color: #ffffff;
+            --neon-effect: 0 0 15px #fff;
+            --neon-blue: 0 0 10px #fff;
+            --font-main: 'Montserrat', sans-serif;
+            --font-tech: 'Orbitron', sans-serif;
+        }
+        .dark-theme body, .dark-theme * {
+            font-family: var(--font-main) !important;
+        }
+        .dark-theme .logo, .dark-theme .footer-logo {
+            font-family: var(--font-tech) !important;
+            letter-spacing: 1px;
+        }
+        .dark-theme .btn, .dark-theme .btn-outline {
+            font-family: var(--font-tech) !important;
+            border-radius: 8px !important;
+            box-shadow: 0 0 20px #fff !important;
+            background: #101010 !important;
+            color: #fff !important;
+            border: 2px solid #fff !important;
+        }
+        .dark-theme .btn:hover, .dark-theme .btn-outline:hover {
+            background: #fff !important;
+            color: #101010 !important;
+            box-shadow: 0 0 30px #fff !important;
+        }
+        .dark-theme .section-title h2 {
+            font-family: var(--font-tech) !important;
+            color: #fff !important;
+            text-shadow: 0 0 10px #fff !important;
+        }
+        .dark-theme .service-card,
+        .dark-theme .project-card,
+        .dark-theme .contact-card,
+        .dark-theme .about-image-container,
+        .dark-theme .hero-image-container {
+            box-shadow: 0 0 30px 0 #000, 0 0 0 0 #fff !important;
+            border: 1px solid #fff !important;
+            background-color: #181818 !important;
+        }
+        .dark-theme .tech-item,
+        .dark-theme .skill-item {
+            background-color: rgba(255,255,255,0.08) !important;
+            border: 1px solid #fff !important;
+            color: #fff !important;
+        }
+        .dark-theme .tech-item:hover,
+        .dark-theme .skill-item:hover {
+            background-color: rgba(255,255,255,0.18) !important;
+            color: #101010 !important;
+        }
+        .dark-theme .navbar,
+        .dark-theme header,
+        .dark-theme footer {
+            background: #101010 !important;
+            border-color: #fff !important;
+            box-shadow: none !important;
+        }
+        .dark-theme .logo::after,
+        .dark-theme .footer-logo::after,
+        .dark-theme .section-title h2::after {
+            background: linear-gradient(90deg, #fff, #fff) !important;
+        }
+        .dark-theme .hero {
+            background: linear-gradient(to bottom, #101010 95%, #181818 70%) !important;
+        }
+        .dark-theme .section::before {
+            background: linear-gradient(to bottom, #101010, #181818) !important;
+            opacity: 1 !important;
+        }
+        .dark-theme .project-links a,
+        .dark-theme .footer-social a,
+        .dark-theme .social-links a {
+            border: 1px solid #fff !important;
+            box-shadow: 0 0 10px #fff !important;
+            background: #181818 !important;
+            color: #fff !important;
+        }
+        .dark-theme .project-links a:hover,
+        .dark-theme .footer-social a:hover,
+        .dark-theme .social-links a:hover {
+            background: #ffffff !important;
+            color: #101010 !important;
+        }
+        .dark-theme .glow-effect {
+            background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 70%) !important;
+            filter: blur(40px) !important;
+        }
+        .dark-theme .glow-effect:nth-child(2) {
+            background: radial-gradient(circle, rgba(255,255,255,0.10) 0%, rgba(255,255,255,0) 70%) !important;
+        }
+        .dark-theme .logo i,
+        .dark-theme .footer-logo i,
+        .dark-theme .nav-links a i,
+        .dark-theme .btn i,
+        .dark-theme .project-links a i,
+        .dark-theme .service-icon i,
+        .dark-theme .skill-item i,
+        .dark-theme .contact-card h3 i,
+        .dark-theme .contact-details p i,
+        .dark-theme .footer-social a i {
+            color: #fff !important;
+            filter: none !important;
+            opacity: 1 !important;
+        }
+        /* Íconos del panel de cambio de tema en modo oscuro */
+        .dark-theme [data-theme] i {
+            color: #000000 !important;
+        }
+        .dark-theme .skill-item i,
+        .dark-theme .service-icon i {
+            color: #000000 !important;
+        }
+        .dark-theme .footer-social a:hover,
+        .dark-theme .social-links a:hover {
+            background: #fff;
+            color: black;
+        }
+        .dark-theme .footer-social a:hover i,
+        .dark-theme .social-links a:hover i {
+            color: black !important;
+        }
+
+        /* --- MODO GAMER  --- */
+        .gamer-theme {
+            --dark-bg: #0a0020;
+            --darker-bg: #12003a;
+            --text-color: #f0f0ff;
+            --text-secondary: #b0b0ff;
+            --card-bg: rgba(30, 30, 60, 0.7);
+            --primary-color: #8a2be2;
+            --secondary-color: #00f5ff;
+            --accent-color: #ff00ea;
+            --neon-effect: 0 0 15px #8a2be2;
+            --neon-blue: 0 0 15px #00f5ff;
+            --font-main: 'Orbitron', 'Montserrat', sans-serif;
+            --font-tech: 'Orbitron', 'Montserrat', sans-serif;
+        }
+        .gamer-theme body, .gamer-theme * {
+            font-family: var(--font-main) !important;
+        }
+        .gamer-theme .logo, .gamer-theme .footer-logo {
+            font-family: var(--font-tech) !important;
+            letter-spacing: 2px;
+        }
+        .gamer-theme .btn, .gamer-theme .btn-outline {
+            font-family: var(--font-tech) !important;
+            border-radius: 8px !important;
+            box-shadow: 0 0 20px #8a2be2 !important;
+        }
+        .gamer-theme .section-title h2 {
+            font-family: var(--font-tech) !important;
+        }
+        /* Fondo tipo matrix gamer */
+        .gamer-matrix-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -3;
+            pointer-events: none;
+            opacity: 0.25;
+            transition: opacity 0.5s;
+        }
+        .gamer-theme .gamer-matrix-bg {
+            opacity: 0.5;
+        }
+        .gamer-theme .matrix-bg,
+        .gamer-theme .glow-effect {
+            display: none !important;
+        }
+        /* Estilos para los iconos en modo gamer */
+        .gamer-theme .logo i,
+        .gamer-theme .footer-logo i,
+        .gamer-theme .nav-links a i,
+        .gamer-theme .btn i,
+        .gamer-theme .project-links a i,
+        .gamer-theme .service-icon i,
+        .gamer-theme .skill-item i,
+        .gamer-theme .contact-card h3 i,
+        .gamer-theme .contact-details p i,
+        .gamer-theme .footer-social a i {
+            color: var(--primary-color) !important;
+            filter: drop-shadow(0 0 5px var(--secondary-color)) !important;
+            opacity: 1 !important;
+            display: inline-block !important;
+            font-family: 'Font Awesome 6 Free', 'Font Awesome 6 Brands', 'FontAwesome', Arial, sans-serif !important;
+            font-weight: 900 !important;
+            font-style: normal !important;
+            speak: never;
+        }
+        .gamer-theme .fa,
+        .gamer-theme .fas,
+        .gamer-theme .fab,
+        .gamer-theme .far,
+        .gamer-theme .fal,
+        .gamer-theme .fad {
+            font-family: 'Font Awesome 6 Free', 'Font Awesome 6 Brands', 'FontAwesome', Arial, sans-serif !important;
+            font-weight: 900 !important;
+            font-style: normal !important;
+        }
+
         /* --- MODO HACKER --- */
         .hacker-theme {
             --dark-bg: #101010;
@@ -1695,6 +1776,9 @@
             color: var(--primary-color) !important;
             filter: none !important;
             opacity: 1 !important;
+        }
+        .hacker-theme .service-icon i{
+            color:black !important;
         }
         /* Asegura que los íconos de FontAwesome siempre usen su fuente */
         .fa, .fas, .fab, .far, .fal, .fad {
@@ -1782,107 +1866,6 @@
             background: none !important;
             box-shadow: none !important;
         }
-        /* --- MODO GAMER  --- */
-        .gamer-theme {
-            --dark-bg: #0a0020;
-            --darker-bg: #12003a;
-            --text-color: #f0f0ff;
-            --text-secondary: #b0b0ff;
-            --card-bg: rgba(30, 30, 60, 0.7);
-            --primary-color: #8a2be2;
-            --secondary-color: #00f5ff;
-            --accent-color: #ff00ea;
-            --neon-effect: 0 0 15px #8a2be2;
-            --neon-blue: 0 0 15px #00f5ff;
-            --font-main: 'Orbitron', 'Montserrat', sans-serif;
-            --font-tech: 'Orbitron', 'Montserrat', sans-serif;
-        }
-        .gamer-theme body, .gamer-theme * {
-            font-family: var(--font-main) !important;
-        }
-        .gamer-theme .logo, .gamer-theme .footer-logo {
-            font-family: var(--font-tech) !important;
-            letter-spacing: 2px;
-        }
-        .gamer-theme .btn, .gamer-theme .btn-outline {
-            font-family: var(--font-tech) !important;
-            border-radius: 8px !important;
-            box-shadow: 0 0 20px #8a2be2 !important;
-        }
-        .gamer-theme .section-title h2 {
-            font-family: var(--font-tech) !important;
-        }
-        /* Fondo tipo matrix gamer */
-        .gamer-matrix-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            z-index: -3;
-            pointer-events: none;
-            opacity: 0.25;
-            transition: opacity 0.5s;
-        }
-        .gamer-theme .gamer-matrix-bg {
-            opacity: 0.5;
-        }
-        .gamer-theme .matrix-bg,
-        .gamer-theme .glow-effect {
-            display: none !important;
-        }
-        /* Estilos para los iconos en modo gamer */
-        .gamer-theme .logo i,
-        .gamer-theme .footer-logo i,
-        .gamer-theme .nav-links a i,
-        .gamer-theme .btn i,
-        .gamer-theme .project-links a i,
-        .gamer-theme .service-icon i,
-        .gamer-theme .skill-item i,
-        .gamer-theme .contact-card h3 i,
-        .gamer-theme .contact-details p i,
-        .gamer-theme .footer-social a i {
-            color: var(--primary-color) !important;
-            filter: drop-shadow(0 0 5px var(--secondary-color)) !important;
-            opacity: 1 !important;
-            display: inline-block !important;
-            font-family: 'Font Awesome 6 Free', 'Font Awesome 6 Brands', 'FontAwesome', Arial, sans-serif !important;
-            font-weight: 900 !important;
-            font-style: normal !important;
-            speak: never;
-        }
-        .gamer-theme .fa,
-        .gamer-theme .fas,
-        .gamer-theme .fab,
-        .gamer-theme .far,
-        .gamer-theme .fal,
-        .gamer-theme .fad {
-            font-family: 'Font Awesome 6 Free', 'Font Awesome 6 Brands', 'FontAwesome', Arial, sans-serif !important;
-            font-weight: 900 !important;
-            font-style: normal !important;
-        }
-        /* Íconos del panel de cambio de tema en modo oscuro */
-        .dark-theme [data-theme] i {
-            color: #000000 !important; /* Íconos blancos para los botones del panel en modo oscuro */
-        }
-        /* Contraste de íconos en habilidades y servicios para modo claro y oscuro */
-        .light-theme .skill-item i{
-            color: #000000 !important;
-        }
-        .light-theme .service-icon i {
-            color: #ffffff !important;
-        }
-        .dark-theme .skill-item i,
-        .dark-theme .service-icon i {
-            color: #000000 !important; /* Restaurado a blanco para contraste en modo oscuro */
-        }
-        .dark-theme .social-links a:hover {
-            background: #fff;
-            color: black; /* Esto ya debería hacer el fondo blanco, pero el color del texto (icono) no se está aplicando directamente al <i> */
-        }
-        .dark-theme .social-links a:hover i {
-            color: black;
-        }
         .hacker-theme .social-links a:hover,
         .hacker-theme .footer-social a:hover{
             color: black;
@@ -1894,9 +1877,27 @@
         .hacker-theme .footer-social a:hover{
             color: black;
         }
+
+        .hacker-accent {
+            color: var(--hacker-accent, #00eaff);
+            text-shadow: 0 0 8px #00eaff, 0 0 2px #00eaff;
+            font-weight: bold;
+        }
+        .blink {
+            animation: blink 1.2s steps(2, start) infinite;
+        }
+        @keyframes blink {
+            to { visibility: hidden; }
+        }
+        .hacker-theme .hacker-accent {
+            --hacker-accent: #00eaff;
+            color: #00eaff !important;
+            text-shadow: 0 0 8px #00eaff, 0 0 2px #00eaff;
+        }
     </style>
 </head>
 <body class="dark-theme">
+    <!-- El resto del código HTML permanece igual -->
     <div class="matrix-bg"></div>
     <div class="particles" id="particles"></div>
     <div class="glow-effect"></div>

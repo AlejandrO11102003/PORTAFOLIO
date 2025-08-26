@@ -1,0 +1,2675 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Next-Level | Ingeniero de Sistemas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #8a2be2;
+            --secondary-color: #9370db;
+            --accent-color: #00f5ff;
+            --dark-bg: #0a0a10;
+            --darker-bg: #050508;
+            --text-color: #f0f0ff;
+            --text-secondary: #b0b0ff;
+            --card-bg: rgba(30, 30, 40, 0.7);
+            --neon-effect: 0 0 15px rgba(138, 43, 226, 0.8);
+            --neon-blue: 0 0 15px rgba(0, 245, 255, 0.8);
+            --font-main: 'Montserrat', sans-serif;
+            --font-tech: 'Orbitron', sans-serif;
+        }
+        /* MODO CLARO */
+        .light-theme {
+            --dark-bg: #ffffff;
+            --darker-bg: #f0f0f0;
+            --text-color: #000000;
+            --text-secondary: #333333;
+            --card-bg: #f8f8f8;
+            --primary-color: #000000;
+            --secondary-color: #333333;
+            --accent-color: #000000;
+            --neon-effect: 0 0 15px rgba(0, 0, 0, 0.2);
+            --neon-blue: 0 0 10px rgba(0, 0, 0, 0.1);
+            --font-main: 'Montserrat', Arial, sans-serif;
+            --font-tech: 'Montserrat', Arial, sans-serif;
+        }
+        .light-theme body, .light-theme * {
+            font-family: var(--font-main) !important;
+        }
+        .light-theme .logo, .light-theme .footer-logo {
+            font-family: var(--font-tech) !important;
+            letter-spacing: 1px;
+        }
+        .light-theme .btn,
+        .light-theme .btn-outline,
+        .light-theme .submit-btn {
+            background: var(--dark-bg) !important;
+            color: var(--primary-color) !important;
+            border: 2px solid var(--primary-color) !important;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3) !important;
+        }
+        .light-theme .btn:hover,
+        .light-theme .btn-outline:hover,
+        .light-theme .submit-btn:hover {
+            background: var(--primary-color) !important;
+            color: var(--dark-bg) !important;
+            box-shadow: 0 0 30px rgba(0,0,0,0.5) !important;
+        }
+        .light-theme .section-title h2 {
+            font-family: var(--font-tech) !important;
+            color: var(--primary-color) !important;
+            text-shadow: 0 0 10px rgba(0,0,0,0.1) !important;
+        }
+        .light-theme .service-card,
+        .light-theme .project-card,
+        .light-theme .contact-card,
+        .light-theme .about-image-container,
+        .light-theme .hero-image-container {
+            background-color: var(--card-bg) !important;
+            border: 1px solid var(--secondary-color) !important;
+            box-shadow: 0 0 30px rgba(0,0,0,0.1) !important;
+        }
+        .light-theme .tech-item,
+        .light-theme .skill-item {
+            background-color: var(--card-bg) !important;
+            border: 1px solid var(--secondary-color) !important;
+            color: var(--primary-color) !important;
+        }
+        .light-theme .tech-item:hover,
+        .light-theme .skill-item:hover {
+            background-color: var(--primary-color) !important;
+            color: var(--dark-bg) !important;
+        }
+        .light-theme .navbar,
+        .light-theme header,
+        .light-theme footer {
+            background: var(--dark-bg) !important;
+            border-color: var(--darker-bg) !important;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1) !important;
+        }
+        .light-theme .logo::after,
+        .light-theme .footer-logo::after,
+        .light-theme .section-title h2::after {
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color)) !important;
+        }
+        .light-theme .hero {
+            background: linear-gradient(to bottom, var(--dark-bg), var(--darker-bg)) !important;
+        }
+        .light-theme .section::before {
+            background: linear-gradient(to bottom, var(--dark-bg), var(--darker-bg)) !important;
+            opacity: 1 !important;
+        }
+        .light-theme .project-links a,
+        .light-theme .footer-social a,
+        .light-theme .social-links a {
+            background: var(--card-bg) !important;
+            border: 1px solid var(--secondary-color) !important;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05) !important;
+            color: var(--primary-color) !important;
+        }
+        .light-theme .project-links a:hover,
+        .light-theme .footer-social a:hover,
+        .light-theme .social-links a:hover {
+            background: var(--primary-color) !important;
+            color: var(--dark-bg) !important;
+        }
+        .light-theme .glow-effect {
+            background: radial-gradient(circle, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0) 70%) !important;
+            filter: blur(30px) !important;
+        }
+        .light-theme .glow-effect:nth-child(2) {
+            background: radial-gradient(circle, rgba(0,0,0,0.03) 0%, rgba(0,0,0,0) 70%) !important;
+        }
+        .light-theme .logo i,
+        .light-theme .footer-logo i,
+        .light-theme .nav-links a i,
+        .light-theme .btn i,
+        .light-theme .project-links a i,
+        .light-theme .service-icon i,
+        .light-theme .skill-item i,
+        .light-theme .contact-card h3 i,
+        .light-theme .contact-details p i,
+        .light-theme .footer-social a i {
+            color: #ffffff !important; /* Íconos negros sobre fondo blanco */
+            filter: none !important;
+            opacity: 1 !important;
+        }
+        /* Íconos del panel de cambio de tema en modo claro */
+        .light-theme [data-theme] i {
+            color: #ffffff !important; /* Íconos negros para los botones del panel en modo claro */
+        }
+        /* MODO OSCURO DIFERENCIADO */
+        .dark-theme {
+            --dark-bg: #101010;
+            --darker-bg: #000000;
+            --text-color: #ffffff;
+            --text-secondary: #cccccc;
+            --card-bg: #181818;
+            --primary-color: #ffffff;
+            --secondary-color: #ffffff;
+            --accent-color: #ffffff;
+            --neon-effect: 0 0 15px #fff;
+            --neon-blue: 0 0 10px #fff;
+            --font-main: 'Montserrat', sans-serif;
+            --font-tech: 'Orbitron', sans-serif;
+        }
+        .dark-theme body, .dark-theme * {
+            font-family: var(--font-main) !important;
+        }
+        .dark-theme .logo, .dark-theme .footer-logo {
+            font-family: var(--font-tech) !important;
+            letter-spacing: 1px;
+        }
+        .dark-theme .btn, .dark-theme .btn-outline {
+            font-family: var(--font-tech) !important;
+            border-radius: 8px !important;
+            box-shadow: 0 0 20px #fff !important;
+            background: #101010 !important;
+            color: #fff !important;
+            border: 2px solid #fff !important;
+        }
+        .dark-theme .btn:hover, .dark-theme .btn-outline:hover {
+            background: #fff !important;
+            color: #101010 !important;
+            box-shadow: 0 0 30px #fff !important;
+        }
+        .dark-theme .section-title h2 {
+            font-family: var(--font-tech) !important;
+            color: #fff !important;
+            text-shadow: 0 0 10px #fff !important;
+        }
+        .dark-theme .service-card,
+        .dark-theme .project-card,
+        .dark-theme .contact-card,
+        .dark-theme .about-image-container,
+        .dark-theme .hero-image-container {
+            box-shadow: 0 0 30px 0 #000, 0 0 0 0 #fff !important;
+            border: 1px solid #fff !important;
+            background-color: #181818 !important;
+        }
+        .dark-theme .tech-item,
+        .dark-theme .skill-item {
+            background-color: rgba(255,255,255,0.08) !important;
+            border: 1px solid #fff !important;
+            color: #fff !important;
+        }
+        .dark-theme .tech-item:hover,
+        .dark-theme .skill-item:hover {
+            background-color: rgba(255,255,255,0.18) !important;
+            color: #101010 !important;
+        }
+        .dark-theme .navbar,
+        .dark-theme header,
+        .dark-theme footer {
+            background: #101010 !important;
+            border-color: #fff !important;
+            box-shadow: none !important;
+        }
+        .dark-theme .logo::after,
+        .dark-theme .footer-logo::after,
+        .dark-theme .section-title h2::after {
+            background: linear-gradient(90deg, #fff, #fff) !important;
+        }
+        .dark-theme .hero {
+            background: linear-gradient(to bottom, #101010 95%, #181818 70%) !important;
+        }
+        .dark-theme .section::before {
+            background: linear-gradient(to bottom, #101010, #181818) !important;
+            opacity: 1 !important;
+        }
+        .dark-theme .project-links a,
+        .dark-theme .footer-social a,
+        .dark-theme .social-links a {
+            border: 1px solid #fff !important;
+            box-shadow: 0 0 10px #fff !important;
+            background: #181818 !important;
+            color: #fff !important;
+        }
+        .dark-theme .project-links a:hover,
+        .dark-theme .footer-social a:hover,
+        .dark-theme .social-links a:hover {
+            background: #fff !important;
+            color: #101010 !important;
+        }
+        .dark-theme .glow-effect {
+            background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 70%) !important;
+            filter: blur(40px) !important;
+        }
+        .dark-theme .glow-effect:nth-child(2) {
+            background: radial-gradient(circle, rgba(255,255,255,0.10) 0%, rgba(255,255,255,0) 70%) !important;
+        }
+        .dark-theme .logo i,
+        .dark-theme .footer-logo i,
+        .dark-theme .nav-links a i,
+        .dark-theme .btn i,
+        .dark-theme .project-links a i,
+        .dark-theme .service-icon i,
+        .dark-theme .skill-item i,
+        .dark-theme .contact-card h3 i,
+        .dark-theme .contact-details p i,
+        .dark-theme .footer-social a i {
+            color: #fff !important;
+            filter: none !important;
+            opacity: 1 !important;
+        }
+        .hacker-accent {
+            color: var(--hacker-accent, #00eaff);
+            text-shadow: 0 0 8px #00eaff, 0 0 2px #00eaff;
+            font-weight: bold;
+        }
+        .blink {
+            animation: blink 1.2s steps(2, start) infinite;
+        }
+        @keyframes blink {
+            to { visibility: hidden; }
+        }
+        .hacker-theme .hacker-accent {
+            --hacker-accent: #00eaff;
+            color: #00eaff !important;
+            text-shadow: 0 0 8px #00eaff, 0 0 2px #00eaff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: var(--font-main);
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        /* Futuristic Background Animation */
+        .matrix-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            opacity: 0.15;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path fill="%238a2be2" d="M20,20 L180,20 L180,180 L20,180 Z" opacity="0.05"/></svg>') center/cover no-repeat;
+        }
+
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            background: var(--accent-color);
+            border-radius: 50%;
+            opacity: 0.5;
+            animation: float-particle linear infinite;
+        }
+
+        @keyframes float-particle {
+            0% {
+                transform: translateY(0) translateX(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.5;
+            }
+            90% {
+                opacity: 0.5;
+            }
+            100% {
+                transform: translateY(-100vh) translateX(20px);
+                opacity: 0;
+            }
+        }
+
+        /* Glow effect por defecto (morado) */
+        .glow-effect {
+            position: fixed;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(138, 43, 226, 0.2) 0%, rgba(138, 43, 226, 0) 70%);
+            filter: blur(30px);
+            z-index: -1;
+            animation: pulse-glow 8s ease-in-out infinite alternate;
+        }
+
+        .glow-effect:nth-child(1) {
+            top: -100px;
+            left: -100px;
+        }
+
+        .glow-effect:nth-child(2) {
+            bottom: -100px;
+            right: -100px;
+            background: radial-gradient(circle, rgba(0, 245, 255, 0.2) 0%, rgba(0, 245, 255, 0) 70%);
+            animation-delay: 2s;
+        }
+
+        @keyframes pulse-glow {
+            0% {
+                transform: scale(0.8);
+                opacity: 0.5;
+            }
+            100% {
+                transform: scale(1.2);
+                opacity: 0.8;
+            }
+        }
+
+        /* Glow effect para modo hacker (negro) */
+        .hacker-theme .glow-effect {
+            background: radial-gradient(circle, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0) 70%) !important;
+            filter: blur(50px) !important;
+        }
+        .hacker-theme .glow-effect:nth-child(2) {
+            background: radial-gradient(circle, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0) 70%) !important;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        /* Futuristic Header */
+        header {
+            background-color: rgba(10, 10, 16, 0.85);
+            backdrop-filter: blur(15px);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+            border-bottom: 1px solid rgba(138, 43, 226, 0.3);
+            transition: all 0.5s ease;
+        }
+
+        header.scrolled {
+            padding: 10px 0;
+            background-color: rgba(5, 5, 8, 0.95);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 0;
+            transition: all 0.3s;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--text-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            font-family: var(--font-tech);
+            letter-spacing: 1px;
+            position: relative;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+            text-shadow: var(--neon-effect);
+        }
+
+        .logo i {
+            margin-right: 12px;
+            color: var(--primary-color);
+            font-size: 32px;
+        }
+
+        .logo::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.5s ease;
+        }
+
+        .logo:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 40px;
+            position: relative;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+            font-family: var(--font-tech);
+            text-transform: uppercase;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+            text-shadow: var(--neon-blue);
+        }
+
+        .nav-links a::before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::before {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .hamburger i {
+            font-size: 28px;
+            color: var(--text-color);
+            transition: all 0.3s;
+        }
+
+        .hamburger:hover i {
+            color: var(--accent-color);
+        }
+
+        /* Cyberpunk Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text {
+            flex: 1;
+            padding-right: 60px;
+        }
+
+        .hero-text h1 {
+            font-size: 60px;
+            margin-bottom: 25px;
+            line-height: 1.2;
+            font-weight: 800;
+            font-family: var(--font-tech);
+            letter-spacing: 1px;
+            position: relative;
+            text-transform: uppercase;
+        }
+
+        .hero-text h1 span {
+            color: var(--primary-color);
+            text-shadow: var(--neon-effect);
+            position: relative;
+        }
+
+        .hero-text h1 span::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+        }
+
+        .hero-text p {
+            font-size: 20px;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            max-width: 700px;
+            line-height: 1.8;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .hero-image-container {
+            position: relative;
+            width: 450px;
+            height: 450px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid rgba(138, 43, 226, 0.3);
+            box-shadow: 0 0 50px rgba(138, 43, 226, 0.5),
+                        inset 0 0 50px rgba(138, 43, 226, 0.3);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .hero-image-container::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            z-index: -1;
+            opacity: 0.5;
+            filter: blur(20px);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .hero-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(20%) contrast(110%);
+            transition: all 0.5s;
+        }
+
+        .hero-image:hover img {
+            filter: grayscale(0%) contrast(120%);
+            transform: scale(1.05);
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-30px);
+            }
+        }
+
+        .social-links {
+            display: flex;
+            margin-top: 40px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: rgba(138, 43, 226, 0.1);
+            border-radius: 50%;
+            margin-right: 20px;
+            color: var(--text-color);
+            text-decoration: none;
+            transition: all 0.5s;
+            border: 1px solid rgba(138, 43, 226, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-links a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(138, 43, 226, 0.4), transparent);
+            transition: all 0.5s;
+        }
+
+        .social-links a:hover {
+            background-color: rgba(138, 43, 226, 0.3);
+            transform: translateY(-5px);
+            box-shadow: var(--neon-effect);
+        }
+
+        .social-links a:hover::before {
+            left: 100%;
+        }
+
+        .social-links a i {
+            font-size: 20px;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover i {
+            transform: scale(1.2);
+            color: var(--accent-color);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.5s;
+            box-shadow: 0 5px 25px rgba(138, 43, 226, 0.5);
+            position: relative;
+            overflow: hidden;
+            font-family: var(--font-tech);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: all 0.5s;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 35px rgba(138, 43, 226, 0.8);
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            margin-left: 20px;
+            box-shadow: none;
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-color);
+            color: white;
+            box-shadow: var(--neon-effect);
+        }
+
+        /* Futuristic Sections */
+        .section {
+            padding: 150px 0;
+            position: relative;
+        }
+
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(10, 10, 16, 0.9), rgba(10, 10, 16, 0.7));
+            z-index: -1;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 80px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-family: var(--font-tech);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+        }
+
+        .section-title p {
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        /* About Section with Cyberpunk Style */
+        .about-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .about-text {
+            flex: 1;
+            padding-right: 80px;
+        }
+
+        .about-text h3 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            font-family: var(--font-tech);
+            letter-spacing: 1px;
+            color: var(--accent-color);
+            text-shadow: var(--neon-blue);
+        }
+
+        .about-text p {
+            margin-bottom: 25px;
+            color: var(--text-secondary);
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .skills {
+            margin-top: 40px;
+        }
+
+        .skills h4 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-family: var(--font-tech);
+            letter-spacing: 1px;
+            color: var(--text-color);
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skill-item {
+            background-color: rgba(138, 43, 226, 0.1);
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            transition: all 0.5s;
+            border: 1px solid rgba(138, 43, 226, 0.3);
+            backdrop-filter: blur(5px);
+        }
+
+        .skill-item:hover {
+            background-color: rgba(138, 43, 226, 0.3);
+            transform: translateY(-5px);
+            box-shadow: var(--neon-effect);
+            border-color: var(--primary-color);
+        }
+
+        .skill-item i {
+            margin-right: 10px;
+            color: var(--primary-color);
+            font-size: 18px;
+        }
+
+        .skill-item:hover i {
+            color: var(--accent-color);
+            transform: scale(1.2);
+        }
+
+        .about-image {
+            flex: 1;
+            text-align: center;
+            position: relative;
+        }
+
+        .about-image-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            height: 500px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 50px rgba(138, 43, 226, 0.3);
+            border: 1px solid rgba(138, 43, 226, 0.5);
+        }
+
+        .about-image-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(138, 43, 226, 0.1), transparent);
+            z-index: 1;
+        }
+
+        .about-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(30%) contrast(110%);
+            transition: all 0.5s;
+        }
+
+        .about-image-container:hover img {
+            filter: grayscale(0%) contrast(120%);
+            transform: scale(1.05);
+        }
+
+        .tech-grid {
+            position: absolute;
+            bottom: -50px;
+            left: -50px;
+            width: 300px;
+            height: 300px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><path fill="none" stroke="%238a2be2" stroke-width="0.5" d="M20,20 L180,20 L180,180 L20,180 Z M50,20 L50,180 M80,20 L80,180 M110,20 L110,180 M140,20 L140,180 M20,50 L180,50 M20,80 L180,80 M20,110 L180,110 M20,140 L180,140" opacity="0.5"/></svg>') center/cover no-repeat;
+            z-index: -1;
+            opacity: 0.5;
+            animation: rotate 60s linear infinite;
+        }
+
+        /* Futuristic Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .service-card {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            padding: 40px;
+            transition: all 0.5s;
+            border: 1px solid rgba(138, 43, 226, 0.3);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(138, 43, 226, 0.1), transparent);
+            z-index: -1;
+        }
+
+        .service-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 50px rgba(138, 43, 226, 0.3);
+            border-color: var(--primary-color);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+            font-size: 32px;
+            color: white;
+            box-shadow: var(--neon-effect);
+        }
+
+        .service-card h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-family: var(--font-tech);
+            letter-spacing: 1px;
+            color: var(--accent-color);
+        }
+
+        .service-card p {
+            color: var(--text-secondary);
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        /* Cyberpunk Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.5s;
+            border: 1px solid rgba(138, 43, 226, 0.3);
+            backdrop-filter: blur(10px);
+            position: relative;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(138, 43, 226, 0.1), transparent);
+            z-index: -1;
+        }
+
+        .project-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 50px rgba(138, 43, 226, 0.3);
+            border-color: var(--primary-color);
+        }
+
+        .project-image {
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .project-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent 60%, rgba(10, 10, 16, 0.8));
+            z-index: 1;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s, filter 0.8s;
+            filter: brightness(0.8);
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.1);
+            filter: brightness(1);
+        }
+
+        .project-info {
+            padding: 30px;
+        }
+
+        .project-info h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            font-family: var(--font-tech);
+            letter-spacing: 1px;
+            color: var(--accent-color);
+        }
+
+        .project-info p {
+            color: var(--text-secondary);
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .tech-item {
+            background-color: rgba(138, 43, 226, 0.1);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: var(--primary-color);
+            border: 1px solid rgba(138, 43, 226, 0.3);
+            font-family: var(--font-tech);
+            letter-spacing: 1px;
+            transition: all 0.3s;
+        }
+
+        .tech-item:hover {
+            background-color: rgba(138, 43, 226, 0.3);
+            color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+
+        .project-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .project-links a {
+            display: inline-flex;
+            align-items: center;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.5s;
+            font-family: var(--font-tech);
+            letter-spacing: 1px;
+        }
+
+        .project-links a i {
+            margin-right: 10px;
+            font-size: 18px;
+            transition: all 0.3s;
+        }
+
+        .project-links a:first-child {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            box-shadow: 0 5px 20px rgba(138, 43, 226, 0.5);
+        }
+
+        .project-links a:first-child:hover {
+            background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(138, 43, 226, 0.8);
+        }
+
+        .project-links a:first-child:hover i {
+            transform: scale(1.2);
+        }
+
+        .project-links a:last-child {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .project-links a:last-child:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-5px);
+            box-shadow: var(--neon-effect);
+        }
+
+        .project-links a:last-child:hover i {
+            transform: scale(1.2);
+            color: white;
+        }
+
+        /* Futuristic Contact Section */
+        .contact-container {
+            display: flex;
+            gap: 60px;
+            margin-top: 60px;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-card {
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            transition: all 0.5s;
+            border: 1px solid rgba(138, 43, 226, 0.3);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(138, 43, 226, 0.1), transparent);
+            z-index: -1;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(138, 43, 226, 0.3);
+            border-color: var(--primary-color);
+        }
+
+        .contact-card h3 {
+            font-size: 24px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            font-family: var(--font-tech);
+            letter-spacing: 1px;
+            color: var(--accent-color);
+        }
+
+        .contact-card h3 i {
+            margin-right: 15px;
+            color: var(--primary-color);
+            font-size: 28px;
+        }
+
+        .contact-details p {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .contact-details p i {
+            margin-right: 15px;
+            width: 25px;
+            color: var(--primary-color);
+            font-size: 20px;
+        }
+
+        .contact-form {
+            flex: 1;
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 15px;
+            border: 1px solid rgba(138, 43, 226, 0.3);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-form::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(138, 43, 226, 0.1), transparent);
+            z-index: -1;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 12px;
+            font-weight: 600;
+            font-family: var(--font-tech);
+            letter-spacing: 1px;
+            color: var(--accent-color);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 15px 20px;
+            background-color: rgba(10, 10, 16, 0.7);
+            border: 1px solid rgba(138, 43, 226, 0.3);
+            border-radius: 8px;
+            color: var(--text-color);
+            transition: all 0.5s;
+            font-size: 16px;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(138, 43, 226, 0.3);
+            background-color: rgba(10, 10, 16, 0.9);
+        }
+
+        textarea.form-control {
+            min-height: 180px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.5s;
+            font-family: var(--font-tech);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 16px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .submit-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: all 0.5s;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(138, 43, 226, 0.8);
+        }
+
+        .submit-btn:hover::before {
+            left: 100%;
+        }
+
+        /* Futuristic Footer */
+        footer {
+            background-color: var(--darker-bg);
+            padding: 80px 0 30px;
+            text-align: center;
+            position: relative;
+            border-top: 1px solid rgba(138, 43, 226, 0.3);
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(138, 43, 226, 0.05), transparent);
+            z-index: -1;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 30px;
+            display: inline-block;
+            font-family: var(--font-tech);
+            letter-spacing: 2px;
+            color: var(--text-color);
+            text-decoration: none;
+            position: relative;
+        }
+
+        .footer-logo span {
+            color: var(--primary-color);
+            text-shadow: var(--neon-effect);
+        }
+
+        .footer-logo::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links li {
+            margin: 0 20px 15px;
+        }
+
+        .footer-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: all 0.3s;
+            font-family: var(--font-tech);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 14px;
+            position: relative;
+        }
+
+        .footer-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            transition: width 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+            text-shadow: var(--neon-blue);
+        }
+
+        .footer-links a:hover::after {
+            width: 100%;
+        }
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .footer-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: rgba(138, 43, 226, 0.1);
+            border-radius: 50%;
+            margin: 0 15px;
+            color: var(--text-color);
+            text-decoration: none;
+            transition: all 0.5s;
+            border: 1px solid rgba(138, 43, 226, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer-social a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(138, 43, 226, 0.4), transparent);
+            transition: all 0.5s;
+        }
+
+        .footer-social a:hover {
+            background-color: rgba(138, 43, 226, 0.3);
+            transform: translateY(-5px);
+            box-shadow: var(--neon-effect);
+        }
+
+        .footer-social a:hover::before {
+            left: 100%;
+        }
+
+        .footer-social a i {
+            font-size: 20px;
+            transition: all 0.3s;
+        }
+
+        .footer-social a:hover i {
+            transform: scale(1.2);
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            color: var(--text-secondary);
+            font-size: 16px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(138, 43, 226, 0.1);
+            font-family: var(--font-tech);
+            letter-spacing: 1px;
+        }
+
+        /* Animations */
+        @keyframes float-particle {
+            0% {
+                transform: translateY(0) translateX(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.5;
+            }
+            90% {
+                opacity: 0.5;
+            }
+            100% {
+                transform: translateY(-100vh) translateX(20px);
+                opacity: 0;
+            }
+        }
+
+        @keyframes pulse-glow {
+            0% {
+                transform: scale(0.8);
+                opacity: 0.5;
+            }
+            100% {
+                transform: scale(1.2);
+                opacity: 0.8;
+            }
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .hero-text h1 {
+                font-size: 48px;
+            }
+            
+            .about-image-container {
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .hero-content, .about-content, .contact-container {
+                flex-direction: column;
+            }
+            
+            .hero-text, .about-text {
+                padding-right: 0;
+                margin-bottom: 60px;
+            }
+            
+            .hero-image, .about-image {
+                margin-top: 50px;
+            }
+            
+            .section-title h2 {
+                font-size: 40px;
+            }
+            
+            .hero-text h1 {
+                font-size: 42px;
+            }
+            
+            .about-image-container {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 80%;
+                height: 100vh;
+                background-color: var(--darker-bg);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.5s ease;
+                z-index: 1000;
+                backdrop-filter: blur(20px);
+                border-right: 1px solid rgba(138, 43, 226, 0.3);
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .nav-links li {
+                margin: 20px 0;
+            }
+            
+            .hamburger {
+                display: block;
+            }
+            
+            .section {
+                padding: 100px 0;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-text h1 {
+                font-size: 36px;
+            }
+            
+            .section-title h2 {
+                font-size: 32px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-text h1 {
+                font-size: 32px;
+            }
+            
+            .hero-text p {
+                font-size: 18px;
+            }
+            
+            .btn {
+                padding: 12px 30px;
+                font-size: 14px;
+            }
+            
+            .section-title h2 {
+                font-size: 28px;
+            }
+            
+            .service-card, .project-card, .contact-card {
+                padding: 30px;
+            }
+            
+            .project-links {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .project-links a {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .hero-image-container {
+                width: 300px;
+                height: 300px;
+            }
+            
+            .about-image-container {
+                height: 300px;
+            }
+        }
+        /* --- MODO RETRO --- */
+        .retro-theme {
+            --dark-bg: #222831;
+            --darker-bg: #393e46;
+            --text-color: #ffd369;
+            --text-secondary: #eeeeee;
+            --card-bg: #393e46;
+            --primary-color: #ffd369;
+            --secondary-color: #393e46;
+            --accent-color: #00adb5;
+            --neon-effect: 0 0 10px #ffd369;
+            --neon-blue: 0 0 10px #00adb5;
+            --font-main: 'Courier New', Courier, monospace;
+            --font-tech: 'Press Start 2P', 'Courier New', Courier, monospace;
+        }
+        .retro-theme body, .retro-theme * {
+            font-family: var(--font-main) !important;
+        }
+        .retro-theme .logo, .retro-theme .footer-logo {
+            font-family: var(--font-tech) !important;
+            letter-spacing: 2px;
+        }
+        .retro-theme .btn, .retro-theme .btn-outline {
+            font-family: var(--font-tech) !important;
+            border-radius: 0 !important;
+            box-shadow: none !important;
+        }
+        .retro-theme .section-title h2 {
+            font-family: var(--font-tech) !important;
+        }
+        /* --- MODO HACKER --- */
+        .hacker-theme {
+            --dark-bg: #101010;
+            --darker-bg: #181818;
+            --text-color: #00ff41;
+            --text-secondary: #39ff14;
+            --card-bg: #181818;
+            --primary-color: #00ff41;
+            --secondary-color: #39ff14;
+            --accent-color: #00ff41;
+            --neon-effect: 0 0 15px #00ff41;
+            --neon-blue: 0 0 15px #39ff14;
+            --font-main: 'Fira Mono', 'Consolas', monospace;
+            --font-tech: 'Fira Mono', 'Consolas', monospace;
+        }
+        .hacker-theme body, .hacker-theme * {
+            font-family: var(--font-main) !important;
+        }
+        .hacker-theme .logo, .hacker-theme .footer-logo {
+            font-family: var(--font-tech) !important;
+            letter-spacing: 2px;
+        }
+        .hacker-theme .btn, .hacker-theme .btn-outline {
+            font-family: var(--font-tech) !important;
+            border-radius: 0 !important;
+            box-shadow: none !important;
+        }
+        .hacker-theme .section-title h2 {
+            font-family: var(--font-tech) !important;
+        }
+        .hacker-matrix-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -3;
+            pointer-events: none;
+            opacity: 0.25;
+            transition: opacity 0.5s;
+        }
+        .hacker-theme .hacker-matrix-bg {
+            opacity: 0.5;
+        }
+        .hacker-theme .matrix-bg,
+        .hacker-theme .glow-effect {
+            display: none !important;
+        }
+        
+        .hacker-theme .logo i,
+        .hacker-theme .footer-logo i,
+        .hacker-theme .nav-links a i,
+        .hacker-theme .btn i,
+        .hacker-theme .project-links a i,
+        .hacker-theme .service-icon i,
+        .hacker-theme .skill-item i,
+        .hacker-theme .contact-card h3 i,
+        .hacker-theme .contact-details p i,
+        .hacker-theme .footer-social a i {
+            color: var(--primary-color) !important;
+            filter: none !important;
+            opacity: 1 !important;
+        }
+        /* Asegura que los íconos de FontAwesome siempre usen su fuente */
+        .fa, .fas, .fab, .far, .fal, .fad {
+            font-family: 'Font Awesome 6 Free', 'Font Awesome 6 Brands', 'FontAwesome', Arial, sans-serif !important;
+            font-weight: 900 !important;
+            font-style: normal !important;
+            speak: never;
+        }
+        /* Efectos visuales para modo hacker: reemplaza morado por negro/verde */
+        .hacker-theme .service-card,
+        .hacker-theme .project-card,
+        .hacker-theme .contact-card,
+        .hacker-theme .about-image-container,
+        .hacker-theme .hero-image-container {
+            box-shadow: 0 0 30px 0 #000, 0 0 0 0 #00ff41 !important;
+            border: 1px solid #000 !important;
+            background-color: rgba(16,16,16,0.95) !important;
+        }
+        .hacker-theme .btn,
+        .hacker-theme .btn-outline,
+        .hacker-theme .submit-btn {
+            box-shadow: 0 0 15px #000 !important;
+            border: 2px solid #00ff41 !important;
+            background: linear-gradient(45deg, #101010, #181818) !important;
+            color: #00ff41 !important;
+        }
+        .hacker-theme .btn:hover,
+        .hacker-theme .btn-outline:hover,
+        .hacker-theme .submit-btn:hover {
+            background: #000 !important;
+            color: #00ff41 !important;
+            box-shadow: 0 0 30px #00ff41 !important;
+        }
+        .hacker-theme .section::before {
+            background: linear-gradient(to bottom, rgba(16,16,16,0.95), rgba(16,16,16,0.7)) !important;
+            opacity: 1 !important;
+        }
+        .hacker-theme .project-links a,
+        .hacker-theme .footer-social a,
+        .hacker-theme .social-links a {
+            border: 1px solid #000 !important;
+            box-shadow: 0 0 10px #00ff41 !important;
+            background: #181818 !important;
+            color: #00ff41 !important;
+        }
+        .hacker-theme .project-links a:hover,
+        .hacker-theme .footer-social a:hover,
+        .hacker-theme .social-links a:hover {
+            background: #00ff41 !important;
+            color: #101010 !important;
+        }
+        .hacker-theme .tech-item,
+        .hacker-theme .skill-item {
+            background-color: rgba(0,0,0,0.18) !important;
+            border: 1px solid #00ff41 !important;
+            color: #00ff41 !important;
+        }
+        .hacker-theme .tech-item:hover,
+        .hacker-theme .skill-item:hover {
+            background-color: rgba(0,255,65,0.18) !important;
+            color: #101010 !important;
+        }
+        .hacker-theme .navbar,
+        .hacker-theme header,
+        .hacker-theme footer {
+            background: #101010 !important;
+            border-color: #00ff41 !important;
+            box-shadow: none !important;
+        }
+        .hacker-theme .logo::after,
+        .hacker-theme .footer-logo::after,
+        .hacker-theme .section-title h2::after {
+            background: linear-gradient(90deg, #000, #00ff41) !important;
+        }
+        .hacker-theme .hero {
+            background: linear-gradient(to bottom, rgba(16,16,16,0.95), rgba(16,16,16,0.7)) !important;
+        }
+        /* Fondo uniforme en toda la landing en modo hacker */
+        .hacker-theme body {
+            background: linear-gradient(to bottom, rgba(16,16,16,0.95), rgba(16,16,16,0.7)) !important;
+        }
+        .hacker-theme .section::before,
+        .hacker-theme .hero,
+        .hacker-theme header,
+        .hacker-theme footer {
+            background: none !important;
+            box-shadow: none !important;
+        }
+        /* --- MODO GAMER (antes oscuro) --- */
+        .gamer-theme {
+            --dark-bg: #0a0020;
+            --darker-bg: #12003a;
+            --text-color: #f0f0ff;
+            --text-secondary: #b0b0ff;
+            --card-bg: rgba(30, 30, 60, 0.7);
+            --primary-color: #8a2be2;
+            --secondary-color: #00f5ff;
+            --accent-color: #ff00ea;
+            --neon-effect: 0 0 15px #8a2be2;
+            --neon-blue: 0 0 15px #00f5ff;
+            --font-main: 'Orbitron', 'Montserrat', sans-serif;
+            --font-tech: 'Orbitron', 'Montserrat', sans-serif;
+        }
+        .gamer-theme body, .gamer-theme * {
+            font-family: var(--font-main) !important;
+        }
+        .gamer-theme .logo, .gamer-theme .footer-logo {
+            font-family: var(--font-tech) !important;
+            letter-spacing: 2px;
+        }
+        .gamer-theme .btn, .gamer-theme .btn-outline {
+            font-family: var(--font-tech) !important;
+            border-radius: 8px !important;
+            box-shadow: 0 0 20px #8a2be2 !important;
+        }
+        .gamer-theme .section-title h2 {
+            font-family: var(--font-tech) !important;
+        }
+        /* Fondo tipo matrix gamer */
+        .gamer-matrix-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -3;
+            pointer-events: none;
+            opacity: 0.25;
+            transition: opacity 0.5s;
+        }
+        .gamer-theme .gamer-matrix-bg {
+            opacity: 0.5;
+        }
+        .gamer-theme .matrix-bg,
+        .gamer-theme .glow-effect {
+            display: none !important;
+        }
+        /* Estilos para los iconos en modo gamer */
+        .gamer-theme .logo i,
+        .gamer-theme .footer-logo i,
+        .gamer-theme .nav-links a i,
+        .gamer-theme .btn i,
+        .gamer-theme .project-links a i,
+        .gamer-theme .service-icon i,
+        .gamer-theme .skill-item i,
+        .gamer-theme .contact-card h3 i,
+        .gamer-theme .contact-details p i,
+        .gamer-theme .footer-social a i {
+            color: var(--primary-color) !important;
+            filter: drop-shadow(0 0 5px var(--secondary-color)) !important;
+            opacity: 1 !important;
+            display: inline-block !important;
+            font-family: 'Font Awesome 6 Free', 'Font Awesome 6 Brands', 'FontAwesome', Arial, sans-serif !important;
+            font-weight: 900 !important;
+            font-style: normal !important;
+            speak: never;
+        }
+        .gamer-theme .fa,
+        .gamer-theme .fas,
+        .gamer-theme .fab,
+        .gamer-theme .far,
+        .gamer-theme .fal,
+        .gamer-theme .fad {
+            font-family: 'Font Awesome 6 Free', 'Font Awesome 6 Brands', 'FontAwesome', Arial, sans-serif !important;
+            font-weight: 900 !important;
+            font-style: normal !important;
+        }
+        /* Íconos del panel de cambio de tema en modo oscuro */
+        .dark-theme [data-theme] i {
+            color: #000000 !important; /* Íconos blancos para los botones del panel en modo oscuro */
+        }
+        /* Contraste de íconos en habilidades y servicios para modo claro y oscuro */
+        .light-theme .skill-item i{
+            color: #000000 !important;
+        }
+        .light-theme .service-icon i {
+            color: #ffffff !important;
+        }
+        .dark-theme .skill-item i,
+        .dark-theme .service-icon i {
+            color: #000000 !important; /* Restaurado a blanco para contraste en modo oscuro */
+        }
+    </style>
+</head>
+<body class="dark-theme">
+    <div class="matrix-bg"></div>
+    <div class="particles" id="particles"></div>
+    <div class="glow-effect"></div>
+    <div class="glow-effect"></div>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">
+                    <i class="fas fa-terminal"></i>
+                    <span>ALEJANDRO CASTILLO</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#home">INICIO</a></li>
+                    <li><a href="#about">SOBRE MÍ</a></li>
+                    <li><a href="#skills">HABILIDADES</a></li>
+                    <li><a href="#projects">PROYECTOS</a></li>
+                    <li><a href="#contact">CONTACTO</a></li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>HOLA, SOY <span class="hacker-accent">INGENIERO DE SISTEMAS</span></h1>
+                    <p>Especialista en desarrollo de software con pasión por crear soluciones innovadoras y eficientes. Combinando creatividad y tecnología para construir el futuro digital.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-codepen"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <div style="margin-top: 40px;">
+                        <a href="#contact" class="btn pulse">CONTÁCTAME</a>
+                        <a href="#projects" class="btn btn-outline pulse">VER PROYECTOS</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-image-container">
+                        <img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Desarrollador">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2><span class="hacker-accent">SOBRE MÍ</span></h2>
+                <p>Conoce más sobre mi trayectoria, habilidades y pasión por la tecnología</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3><span class="hacker-accent blink">INGENIERO DE SISTEMAS E INFORMÁTICA</span></h3>
+                    <p>Soy un profesional altamente capacitado en el desarrollo de software, con experiencia en múltiples lenguajes de programación y frameworks modernos. Mi enfoque se centra en crear soluciones escalables y eficientes que resuelvan problemas complejos.</p>
+                    <p>Con una mentalidad orientada a resultados, me especializo en transformar ideas en productos digitales funcionales y atractivos, siempre manteniendo los más altos estándares de calidad y performance.</p>
+                    
+                    <div class="skills">
+                        <h4>TECNOLOGÍAS PRINCIPALES</h4>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <i class="fab fa-js"></i> JavaScript
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-react"></i> React
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-database"></i> SQL
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-node-js"></i> Node.js
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-server"></i> Spring
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-docker"></i> Docker
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="about-image-container">
+                        <img src="img/Jandro.jpg" alt="Gestión de Concesionaria">                    </div>
+                    <div class="tech-grid"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+        <div class="container">
+            <div class="section-title">
+                <h2><span class="hacker-accent">MIS HABILIDADES</span></h2>
+                <p>Tecnologías y herramientas que domino y utilizo en mis proyectos</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3><span class="hacker-accent">LENGUAJES</span></h3>
+                    <p>  Desarrollo de aplicaciones robustas y eficientes.</p>
+                    <div class="skills-list" style="margin-top: 20px;">
+                        <div class="skill-item">
+                            <i class="fab fa-js"></i> JavaScript
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-code"></i> TypeScript
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-php"></i> PHP
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-java"></i> Java
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i> Python
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3><span class="hacker-accent">BASES DE DATOS</span></h3>
+                    <p>Experiencia en diseño, implementación y optimización de bases de datos relacionales y NoSQL.</p>
+                    <div class="skills-list" style="margin-top: 20px;">
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i> MySQL
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i> PostgreSQL
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i> SUPABASE
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i> MongoDB
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i> MariaDB
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3><span class="hacker-accent">FRAMEWORKS</span></h3>
+                    <p>Desarrollo de aplicaciones modernas utilizando los frameworks más populares del mercado.</p>
+                    <div class="skills-list" style="margin-top: 20px;">
+                        <div class="skill-item">
+                            <i class="fab fa-react"></i> React
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-leaf"></i> Spring
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-fire"></i> CodeIgniter
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-node-js"></i> NestJS
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-flask"></i> Flask
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3><span class="hacker-accent">HERRAMIENTAS</span></h3>
+                    <p>Plataformas y tecnologías que utilizo para mejorar el flujo de trabajo y despliegue.</p>
+                    <div class="skills-list" style="margin-top: 20px;">
+                        <div class="skill-item">
+                            <i class="fab fa-git-alt"></i> Git
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-docker"></i> Docker
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-aws"></i> Clean Code
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-server"></i> REST API
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-mobile-alt"></i> Responsive
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="section-title">
+                <h2><span class="hacker-accent">MIS PROYECTOS</span></h2>
+                <p>Algunos de los proyectos destacados que he desarrollado</p>
+            </div>
+            <div class="projects-grid">
+                <!-- Proyecto 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Sistema de Gestión de Negocio">
+                    </div>
+                    <div class="project-info">
+                        <h3>SISTEMA DE GESTIÓN DE NEGOCIO</h3>
+                        <p>Plataforma completa para gestión de ventas, inventario, clientes y análisis de datos con panel administrativo avanzado.</p>
+                        <div class="project-tech">
+                            <span class="tech-item">REACT</span>
+                            <span class="tech-item">CODEIGNITER</span>
+                            <span class="tech-item">MYSQL</span>
+                            <span class="tech-item">JWT</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#contact" class="btn btn-outline">
+                                <i class="fas fa-envelope"></i> Solicitar información
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="img/dashboard-ACJ_TALLER.png" alt="Gestión de Concesionaria">
+                    </div>
+                    <div class="project-info">
+                        <h3>SISTEMA DE VENTAS AUTOMOTRIZ</h3>
+                        <p>Sistema integral para administración de inventario, ventas, financiamiento y CRM para una concesionaria de vehiculos.</p>
+                        <div class="project-tech">
+                            <span class="tech-item">SPRING BOOT</span>
+                            <span class="tech-item">MYSQL</span>
+                            <span class="tech-item">REACT</span>
+                            <span class="tech-item">DOCKER</span>
+                            <span class="tech-item">APACHE</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#contact" class="btn btn-outline">
+                                <i class="fas fa-envelope"></i> Solicitar información
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Gestión Empresarial">
+                    </div>
+                    <div class="project-info">
+                        <h3>GESTIÓN EMPRESARIAL</h3>
+                        <p>Solución completa para gestión de RRHH, contabilidad, utilidades y análisis financiero para empresas.</p>
+                        <div class="project-tech">
+                            <span class="tech-item">NESTJS</span>
+                            <span class="tech-item">TYPESCRIPT</span>
+                            <span class="tech-item">POSTGRESQL</span>
+                            <span class="tech-item">REACT</span>
+                            <span class="tech-item">AWS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#contact" class="btn btn-outline">
+                                <i class="fas fa-envelope"></i> Solicitar información
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2><span class="hacker-accent">CONTACTO</span></h2>
+                <p>¿Tienes un proyecto en mente? ¡Contáctame y hagámoslo realidad!</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <h3><span class="hacker-accent">CORREO ELECTRÓNICO</span></h3>
+                        <div class="contact-details">
+                            <p><i class="fas fa-at"></i> alejandrocastillojara30@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <h3><span class="hacker-accent">TELÉFONO</span></h3>
+                        <div class="contact-details">
+                            <p><i class="fas fa-mobile-alt"></i> +51 981 142 779</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <h3><span class="hacker-accent">UBICACIÓN</span></h3>
+                        <div class="contact-details">
+                            <p><i class="fas fa-city"></i> Lambayeque, Perú</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="formContact">
+                        <div class="form-group">
+                            <label for="name">NOMBRE</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">CORREO ELECTRÓNICO</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">ASUNTO</label>
+                            <input type="text" id="subject" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">MENSAJE</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn pulse">ENVIAR MENSAJE</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <a href="#" class="footer-logo"><span>DEV</span>PORTFOLIO</a>
+                <ul class="footer-links">
+                    <li><a href="#home">INICIO</a></li>
+                    <li><a href="#about">SOBRE MÍ</a></li>
+                    <li><a href="#skills">HABILIDADES</a></li>
+                    <li><a href="#projects">PROYECTOS</a></li>
+                    <li><a href="#contact">CONTACTO</a></li>
+                </ul>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-codepen"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+                <p class="copyright">© 2023 ALCJ. TODOS LOS DERECHOS RESERVADOS.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.querySelector('i').classList.toggle('fa-times');
+        });
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.querySelector('i').classList.remove('fa-times');
+            });
+        });
+        
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Form submission
+        const contactForm = document.getElementById('formContact');
+        
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form values
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const subject = document.getElementById('subject').value;
+                const message = document.getElementById('message').value;
+                
+                // Here you would typically send the form data to a server
+                // For this example, we'll just log it and show an alert
+                console.log({ name, email, subject, message });
+                
+                // Show success message
+                const submitBtn = document.querySelector('.submit-btn');
+                submitBtn.innerHTML = '<i class="fas fa-check"></i> MENSAJE ENVIADO';
+                submitBtn.style.background = 'linear-gradient(45deg, #4CAF50, #8BC34A)';
+                
+                // Reset form after 2 seconds
+                setTimeout(() => {
+                    contactForm.reset();
+                    submitBtn.innerHTML = 'ENVIAR MENSAJE';
+                    submitBtn.style.background = 'linear-gradient(45deg, var(--primary-color), var(--secondary-color))';
+                }, 2000);
+            });
+        }
+        
+        // Create particles for background
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 50;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // Random size between 1px and 3px
+                const size = Math.random() * 2 + 1;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                
+                // Random position
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.top = `${Math.random() * 100 + 100}%`;
+                
+                // Random animation duration between 10s and 20s
+                const duration = Math.random() * 10 + 10;
+                particle.style.animationDuration = `${duration}s`;
+                
+                // Random delay
+                particle.style.animationDelay = `${Math.random() * 5}s`;
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+        
+        // Initialize particles
+        createParticles();
+        
+        // Animation on scroll
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.service-card, .project-card, .contact-card, .about-image-container, .hero-text, .hero-image-container');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        };
+        
+        // Set initial state for animated elements
+        document.querySelectorAll('.service-card, .project-card, .contact-card, .about-image-container').forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(30px)';
+            element.style.transition = 'all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1)';
+        });
+        
+        document.querySelectorAll('.hero-text, .hero-image-container').forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(50px)';
+            element.style.transition = 'all 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s';
+        });
+        
+        // Run once on page load
+        setTimeout(() => {
+            animateOnScroll();
+            document.querySelectorAll('.hero-text, .hero-image-container').forEach(element => {
+                element.style.opacity = '1';
+                element.style.transform = 'translateY(0)';
+            });
+        }, 300);
+        
+        // Run on scroll
+        window.addEventListener('scroll', animateOnScroll);
+        
+        // Add pulse animation to buttons
+        const pulseButtons = document.querySelectorAll('.pulse');
+        
+        pulseButtons.forEach(button => {
+            button.addEventListener('mouseenter', () => {
+                button.classList.add('pulse-animate');
+            });
+            
+            button.addEventListener('animationend', () => {
+                button.classList.remove('pulse-animate');
+            });
+        });
+        
+        // Add keyframe for pulse animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes pulse {
+                0% {
+                    box-shadow: 0 0 0 0 rgba(138, 43, 226, 0.7);
+                }
+                70% {
+                    box-shadow: 0 0 0 15px rgba(138, 43, 226, 0);
+                }
+                100% {
+                    box-shadow: 0 0 0 0 rgba(138, 43, 226, 0);
+                }
+            }
+            
+            .pulse-animate {
+                animation: pulse 1.5s infinite;
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Theme switcher con panel de 4 botones
+        const themes = [
+            { name: 'oscuro', class: 'dark-theme', icon: '<i class="fas fa-moon"></i>', label: 'Oscuro' },
+            { name: 'claro', class: 'light-theme', icon: '<i class="fas fa-sun"></i>', label: 'Claro' },
+            { name: 'gamer', class: 'gamer-theme', icon: '<i class="fas fa-gamepad"></i>', label: 'Gamer' },
+            { name: 'hacker', class: 'hacker-theme', icon: '<i class="fas fa-terminal"></i>', label: 'Hacker' }
+        ];
+        let currentTheme = 0;
+        
+        // Crear el panel contenedor para los botones de tema
+        const themePanel = document.createElement('div');
+        themePanel.style.position = 'fixed';
+        themePanel.style.bottom = '40px';
+        themePanel.style.right = '40px';
+        themePanel.style.display = 'flex';
+        themePanel.style.flexDirection = 'row';
+        themePanel.style.gap = '10px';
+        themePanel.style.padding = '10px';
+        themePanel.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+        themePanel.style.borderRadius = '15px';
+        themePanel.style.zIndex = '1000';
+        themePanel.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.3)';
+        
+        // Crear los botones para cada tema
+        themes.forEach((theme, index) => {
+            const themeButton = document.createElement('div');
+            themeButton.innerHTML = theme.icon;
+            themeButton.setAttribute('data-theme', theme.class);
+            themeButton.setAttribute('title', theme.label);
+            themeButton.style.width = '50px';
+            themeButton.style.height = '50px';
+            themeButton.style.backgroundColor = 'var(--primary-color)';
+            themeButton.style.borderRadius = '50%';
+            themeButton.style.display = 'flex';
+            themeButton.style.alignItems = 'center';
+            themeButton.style.justifyContent = 'center';
+            themeButton.style.cursor = 'pointer';
+            themeButton.style.color = 'white';
+            themeButton.style.fontSize = '20px';
+            themeButton.style.transition = 'all 0.3s';
+            themeButton.style.opacity = index === currentTheme ? '1' : '0.6';
+            themeButton.style.transform = index === currentTheme ? 'scale(1.1)' : 'scale(1)';
+            themeButton.style.boxShadow = index === currentTheme ? '0 0 15px var(--primary-color)' : 'none';
+            
+            // Asignar evento para cambiar al tema específico
+            themeButton.addEventListener('click', () => {
+                applyTheme(index);
+            });
+            
+            themePanel.appendChild(themeButton);
+        });
+        
+        // Función para aplicar un tema específico
+        function applyTheme(themeIndex) {
+            // Actualizar el índice del tema actual
+            currentTheme = themeIndex;
+            
+            // Quitar todas las clases de tema
+            document.body.classList.remove('dark-theme', 'light-theme', 'gamer-theme', 'hacker-theme', 'retro-theme', 'minimal-theme');
+            
+            // Aplicar la clase del tema seleccionado
+            if (themes[currentTheme].class) {
+                document.body.classList.add(themes[currentTheme].class);
+            }
+            
+            // Actualizar la apariencia de los botones
+            Array.from(themePanel.children).forEach((button, index) => {
+                button.style.opacity = index === currentTheme ? '1' : '0.6';
+                button.style.transform = index === currentTheme ? 'scale(1.1)' : 'scale(1)';
+                button.style.boxShadow = index === currentTheme ? '0 0 15px var(--primary-color)' : 'none';
+            });
+            
+            // Actualizar fondos y efectos visuales
+            updateMatrixBg();
+            updateBackgrounds();
+            
+            // Asegurar que los iconos sean visibles en el tema gamer
+            if (themes[currentTheme].class === 'gamer-theme') {
+                // Aplicar inmediatamente y luego con un pequeño retraso para asegurar que los estilos se apliquen correctamente
+                updateGamerIcons();
+                setTimeout(() => {
+                    updateGamerIcons();
+                }, 100);
+                // Aplicar una vez más después de un tiempo mayor para asegurar que los iconos se muestren correctamente
+                setTimeout(() => {
+                    updateGamerIcons();
+                }, 500);
+            }
+        }
+        
+        document.body.appendChild(themePanel);
+        
+        // Typewriter effect for hero text
+        const typewriter = (element, text, speed) => {
+            let i = 0;
+            const interval = setInterval(() => {
+                if (i < text.length) {
+                    element.textContent += text.charAt(i);
+                    i++;
+                } else {
+                    clearInterval(interval);
+                }
+            }, speed);
+        };
+        
+
+        // Matrix background para modo hacker y gamer
+        let matrixCanvas = null;
+        function startMatrixBg(colors = ['#00ff41']) {
+            if (!matrixCanvas) {
+                matrixCanvas = document.createElement('canvas');
+                matrixCanvas.className = 'hacker-matrix-bg';
+                document.body.appendChild(matrixCanvas);
+            }
+            // Cambia la clase según el tema
+            matrixCanvas.className = document.body.classList.contains('gamer-theme') ? 'gamer-matrix-bg' : 'hacker-matrix-bg';
+            const ctx = matrixCanvas.getContext('2d');
+            let width = window.innerWidth;
+            let height = window.innerHeight;
+            matrixCanvas.width = width;
+            matrixCanvas.height = height;
+            const fontSize = 18;
+            const columns = Math.floor(width / fontSize);
+            const drops = Array(columns).fill(1);
+            const chars = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズヅブプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッンABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+            function draw() {
+                ctx.fillStyle = document.body.classList.contains('gamer-theme') ? 'rgba(10,0,32,0.08)' : 'rgba(16,16,16,0.08)';
+                ctx.fillRect(0, 0, width, height);
+                ctx.font = fontSize + 'px Orbitron, Consolas, monospace';
+                for (let i = 0; i < drops.length; i++) {
+                    const text = chars[Math.floor(Math.random() * chars.length)];
+                    // Color aleatorio de la paleta
+                    ctx.fillStyle = colors[Math.floor(Math.random() * colors.length)];
+                    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+                    if (drops[i] * fontSize > height && Math.random() > 0.975) {
+                        drops[i] = 0;
+                    }
+                    drops[i]++;
+                }
+            }
+            matrixCanvas.style.display = 'block';
+            if (matrixCanvas._interval) clearInterval(matrixCanvas._interval);
+            matrixCanvas._interval = setInterval(draw, 50);
+            window.addEventListener('resize', () => {
+                width = window.innerWidth;
+                height = window.innerHeight;
+                matrixCanvas.width = width;
+                matrixCanvas.height = height;
+            });
+        }
+        function stopMatrixBg() {
+            if (matrixCanvas) {
+                matrixCanvas.style.display = 'none';
+                if (matrixCanvas._interval) clearInterval(matrixCanvas._interval);
+            }
+        }
+        // Cambiar matrix bg según tema
+        function updateMatrixBg() {
+            if (document.body.classList.contains('hacker-theme')) {
+                startMatrixBg(['#00ff41', '#39ff14']);
+            } else {
+                stopMatrixBg();
+            }
+        }
+        // Ya no necesitamos este listener adicional porque
+        // updateMatrixBg se llama dentro de la función changeTheme
+        // Llama al cargar
+        updateMatrixBg();
+
+        // Función para asegurar que los iconos sean visibles en el tema gamer
+        function updateGamerIcons() {
+            if (document.body.classList.contains('gamer-theme')) {
+                // Forzar solo los estilos, NO manipular las clases
+                const gamerIcons = document.querySelectorAll('.gamer-theme .logo i, .gamer-theme .footer-logo i, .gamer-theme .nav-links a i, .gamer-theme .btn i, .gamer-theme .project-links a i, .gamer-theme .service-icon i, .gamer-theme .skill-item i, .gamer-theme .contact-card h3 i, .gamer-theme .contact-details p i, .gamer-theme .footer-social a i');
+                gamerIcons.forEach(icon => {
+                    icon.style.color = 'var(--primary-color)';
+                    icon.style.filter = 'drop-shadow(0 0 5px var(--secondary-color))';
+                    icon.style.display = 'inline-block';
+                    icon.style.fontFamily = "'Font Awesome 6 Free', 'Font Awesome 6 Brands', 'FontAwesome', Arial, sans-serif";
+                    icon.style.fontWeight = '900';
+                    icon.style.fontStyle = 'normal';
+                    icon.style.opacity = '1';
+                    // Eliminar el truco de quitar y poner la clase
+                });
+            }
+        }
+        // Llama al cargar
+        updateGamerIcons();
+
+        // Mostrar/ocultar fondos según tema
+        function updateBackgrounds() {
+            // Fondos animados clásicos solo para hacker
+            const matrixBg = document.querySelector('.matrix-bg');
+            const particles = document.getElementById('particles');
+            const glowEffects = document.querySelectorAll('.glow-effect');
+            if (document.body.classList.contains('hacker-theme')) {
+                if (matrixBg) matrixBg.style.display = '';
+                if (particles) particles.style.display = '';
+                glowEffects.forEach(e => e.style.display = '');
+            } else {
+                if (matrixBg) matrixBg.style.display = 'none';
+                if (particles) particles.style.display = 'none';
+                glowEffects.forEach(e => e.style.display = 'none');
+            }
+        }
+        // Ya no necesitamos este listener adicional porque
+        // updateBackgrounds se llama dentro de la función changeTheme
+        updateBackgrounds();
+    </script>
+</body>
+</html>

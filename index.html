@@ -231,7 +231,7 @@
         .dark-theme .project-links a:hover,
         .dark-theme .footer-social a:hover,
         .dark-theme .social-links a:hover {
-            background: #fff !important;
+            background: #ffffff !important;
             color: #101010 !important;
         }
         .dark-theme .glow-effect {
@@ -1286,7 +1286,7 @@
             width: 100%;
             padding: 15px;
             background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-            color: white;
+            color: rgb(0, 0, 0);
             border: none;
             border-radius: 8px;
             font-weight: 700;
@@ -1605,72 +1605,34 @@
             .hero-text h1 {
                 font-size: 32px;
             }
-            
             .hero-text p {
                 font-size: 18px;
             }
-            
             .btn {
                 padding: 12px 30px;
                 font-size: 14px;
             }
-            
             .section-title h2 {
                 font-size: 28px;
             }
-            
             .service-card, .project-card, .contact-card {
                 padding: 30px;
             }
-            
             .project-links {
                 flex-direction: column;
                 gap: 15px;
             }
-            
             .project-links a {
                 width: 100%;
                 text-align: center;
             }
-            
             .hero-image-container {
                 width: 300px;
                 height: 300px;
             }
-            
             .about-image-container {
                 height: 300px;
             }
-        }
-        /* --- MODO RETRO --- */
-        .retro-theme {
-            --dark-bg: #222831;
-            --darker-bg: #393e46;
-            --text-color: #ffd369;
-            --text-secondary: #eeeeee;
-            --card-bg: #393e46;
-            --primary-color: #ffd369;
-            --secondary-color: #393e46;
-            --accent-color: #00adb5;
-            --neon-effect: 0 0 10px #ffd369;
-            --neon-blue: 0 0 10px #00adb5;
-            --font-main: 'Courier New', Courier, monospace;
-            --font-tech: 'Press Start 2P', 'Courier New', Courier, monospace;
-        }
-        .retro-theme body, .retro-theme * {
-            font-family: var(--font-main) !important;
-        }
-        .retro-theme .logo, .retro-theme .footer-logo {
-            font-family: var(--font-tech) !important;
-            letter-spacing: 2px;
-        }
-        .retro-theme .btn, .retro-theme .btn-outline {
-            font-family: var(--font-tech) !important;
-            border-radius: 0 !important;
-            box-shadow: none !important;
-        }
-        .retro-theme .section-title h2 {
-            font-family: var(--font-tech) !important;
         }
         /* --- MODO HACKER --- */
         .hacker-theme {
@@ -1720,7 +1682,6 @@
         .hacker-theme .glow-effect {
             display: none !important;
         }
-        
         .hacker-theme .logo i,
         .hacker-theme .footer-logo i,
         .hacker-theme .nav-links a i,
@@ -1783,7 +1744,6 @@
         .hacker-theme .footer-social a:hover,
         .hacker-theme .social-links a:hover {
             background: #00ff41 !important;
-            color: #101010 !important;
         }
         .hacker-theme .tech-item,
         .hacker-theme .skill-item {
@@ -1822,7 +1782,7 @@
             background: none !important;
             box-shadow: none !important;
         }
-        /* --- MODO GAMER (antes oscuro) --- */
+        /* --- MODO GAMER  --- */
         .gamer-theme {
             --dark-bg: #0a0020;
             --darker-bg: #12003a;
@@ -1916,6 +1876,24 @@
         .dark-theme .service-icon i {
             color: #000000 !important; /* Restaurado a blanco para contraste en modo oscuro */
         }
+        .dark-theme .social-links a:hover {
+            background: #fff;
+            color: black; /* Esto ya debería hacer el fondo blanco, pero el color del texto (icono) no se está aplicando directamente al <i> */
+        }
+        .dark-theme .social-links a:hover i {
+            color: black;
+        }
+        .hacker-theme .social-links a:hover,
+        .hacker-theme .footer-social a:hover{
+            color: black;
+        }
+        .hacker-theme .social-links a:hover i,
+        .hacker-theme .footer-social a:hover i {
+            color: black !important;
+        }
+        .hacker-theme .footer-social a:hover{
+            color: black;
+        }
     </style>
 </head>
 <body class="dark-theme">
@@ -1954,10 +1932,10 @@
                     <h1>HOLA, SOY <span class="hacker-accent">INGENIERO DE SISTEMAS</span></h1>
                     <p>Especialista en desarrollo de software con pasión por crear soluciones innovadoras y eficientes. Combinando creatividad y tecnología para construir el futuro digital.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-codepen"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://github.com/AlejandrO11102003" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="TU_URL_OUTLOOK" target="_blank"><i class="far fa-envelope"></i></a>
+                        <a href="TU_URL_FACEBOOK" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="TU_URL_TIKTOK" target="_blank"><i class="fab fa-tiktok"></i></a>
                     </div>
                     <div style="margin-top: 40px;">
                         <a href="#contact" class="btn pulse">CONTÁCTAME</a>
@@ -1985,7 +1963,6 @@
                     <h3><span class="hacker-accent blink">INGENIERO DE SISTEMAS E INFORMÁTICA</span></h3>
                     <p>Soy un profesional altamente capacitado en el desarrollo de software, con experiencia en múltiples lenguajes de programación y frameworks modernos. Mi enfoque se centra en crear soluciones escalables y eficientes que resuelvan problemas complejos.</p>
                     <p>Con una mentalidad orientada a resultados, me especializo en transformar ideas en productos digitales funcionales y atractivos, siempre manteniendo los más altos estándares de calidad y performance.</p>
-                    
                     <div class="skills">
                         <h4>TECNOLOGÍAS PRINCIPALES</h4>
                         <div class="skills-list">
@@ -2156,7 +2133,6 @@
                         </div>
                     </div>
                 </div>
-                
                 <!-- Proyecto 2 -->
                 <div class="project-card">
                     <div class="project-image">
@@ -2164,7 +2140,7 @@
                     </div>
                     <div class="project-info">
                         <h3>SISTEMA DE VENTAS AUTOMOTRIZ</h3>
-                        <p>Sistema integral para administración de inventario, ventas, financiamiento y CRM para una concesionaria de vehiculos.</p>
+                        <p>Sistem3a integral para administración de inventario, ventas, financiamiento y CRM para una concesionaria de vehiculos.</p>
                         <div class="project-tech">
                             <span class="tech-item">SPRING BOOT</span>
                             <span class="tech-item">MYSQL</span>
@@ -2179,7 +2155,6 @@
                         </div>
                     </div>
                 </div>
-                
                 <!-- Proyecto 3 -->
                 <div class="project-card">
                     <div class="project-image">
@@ -2193,7 +2168,6 @@
                             <span class="tech-item">TYPESCRIPT</span>
                             <span class="tech-item">POSTGRESQL</span>
                             <span class="tech-item">REACT</span>
-                            <span class="tech-item">AWS</span>
                         </div>
                         <div class="project-links">
                             <a href="#contact" class="btn btn-outline">
@@ -2263,7 +2237,7 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <a href="#" class="footer-logo"><span>DEV</span>PORTFOLIO</a>
+                <a href="#" class="footer-logo"><span>ALEJANDRO CASTILLO  </span> PORTFOLIO</a>
                 <ul class="footer-links">
                     <li><a href="#home">INICIO</a></li>
                     <li><a href="#about">SOBRE MÍ</a></li>
@@ -2272,12 +2246,12 @@
                     <li><a href="#contact">CONTACTO</a></li>
                 </ul>
                 <div class="footer-social">
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-codepen"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="https://github.com/AlejandrO11102003" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="TU_URL_OUTLOOK" target="_blank"><i class="far fa-envelope"></i></a>
+                    <a href="TU_URL_FACEBOOK" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="TU_URL_TIKTOK" target="_blank"><i class="fab fa-tiktok"></i></a>
                 </div>
-                <p class="copyright">© 2023 ALCJ. TODOS LOS DERECHOS RESERVADOS.</p>
+                <p class="copyright">© 2025 ALCJ. TODOS LOS DERECHOS RESERVADOS.</p>
             </div>
         </div>
     </footer>

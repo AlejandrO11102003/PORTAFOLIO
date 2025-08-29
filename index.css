@@ -29,7 +29,6 @@ body {
     min-height: 100vh;
 }
 
-/* Futuristic Background Animation */
 .matrix-bg {
     position: fixed;
     top: 0;
@@ -82,7 +81,7 @@ body {
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(138, 43, 226, 0.2) 0%, rgba(138, 43, 226, 0) 70%);
+    background: radial-gradient(circle, rgba(43, 168, 226, 0.2) 0%, rgba(138, 43, 226, 0) 70%);
     filter: blur(30px);
     z-index: -1;
     animation: pulse-glow 8s ease-in-out infinite alternate;
@@ -117,10 +116,9 @@ body {
     padding: 0 30px;
 }
 
-/* Futuristic Header */
 header {
     background-color: rgba(10, 10, 16, 0.85);
-    -webkit-backdrop-filter: blur(15px); /* Para compatibilidad con Safari */
+    -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
     position: fixed;
     width: 100%;
@@ -418,6 +416,26 @@ header.scrolled {
     color: var(--accent-color);
 }
 
+.hero-buttons-container {
+    margin-top: 40px;
+}
+
+.language-skills-list {
+    margin-top: 20px;
+}
+
+.database-skills-list {
+    margin-top: 20px;
+}
+
+.framework-skills-list {
+    margin-top: 20px;
+}
+
+.tools-skills-list {
+    margin-top: 20px;
+}
+
 .btn {
     display: inline-block;
     padding: 15px 40px;
@@ -472,7 +490,6 @@ header.scrolled {
     box-shadow: var(--neon-effect);
 }
 
-/* Futuristic Sections */
 .section {
     padding: 150px 0;
     position: relative;
@@ -524,7 +541,6 @@ header.scrolled {
     line-height: 1.8;
 }
 
-/* About Section with Cyberpunk Style */
 .about-content {
     display: flex;
     align-items: center;
@@ -655,7 +671,6 @@ header.scrolled {
     animation: rotate 60s linear infinite;
 }
 
-/* Futuristic Services Section */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -1058,7 +1073,6 @@ textarea.form-control {
     left: 100%;
 }
 
-/* Futuristic Footer */
 footer {
     background-color: var(--darker-bg);
     padding: 80px 0 30px;
@@ -1217,7 +1231,7 @@ footer::before {
     letter-spacing: 1px;
 }
 
-/* Animations */
+/* animaciones */
 @keyframes float-particle {
     0% {
         transform: translateY(0) translateX(0);
@@ -1260,7 +1274,6 @@ footer::before {
     .hero-text h1 {
         font-size: 48px;
     }
-    
     .about-image-container {
         height: 400px;
     }
@@ -1535,7 +1548,6 @@ footer::before {
     filter: none !important;
     opacity: 1 !important;
 }
-/* Íconos del panel de cambio de tema en modo claro */
 .light-theme [data-theme] i {
     color: #ffffff !important;
 }
@@ -1553,7 +1565,7 @@ footer::before {
     color: #ffffff !important;
 }
 
-/* --- MODO OSCURO DIFERENCIADO --- */
+/* --- MODO OSCURO  --- */
 .dark-theme {
     --dark-bg: #101010;
     --darker-bg: #000000;
@@ -1667,7 +1679,6 @@ footer::before {
     filter: none !important;
     opacity: 1 !important;
 }
-/* Íconos del panel de cambio de tema en modo oscuro */
 .dark-theme [data-theme] i {
     color: #000000 !important;
 }
@@ -1715,7 +1726,6 @@ footer::before {
 .gamer-theme .section-title h2 {
     font-family: var(--font-tech) !important;
 }
-/* Fondo tipo matrix gamer */
 .gamer-matrix-bg {
     position: fixed;
     top: 0;
@@ -1734,7 +1744,6 @@ footer::before {
 .gamer-theme .glow-effect {
     display: none !important;
 }
-/* Estilos para los iconos en modo gamer */
 .gamer-theme .logo i,
 .gamer-theme .footer-logo i,
 .gamer-theme .nav-links a i,
@@ -1829,13 +1838,11 @@ footer::before {
 .hacker-theme .service-icon i{
     color:black !important;
 }
-/* Asegura que los íconos de FontAwesome siempre usen su fuente */
 .fa, .fas, .fab, .far, .fal, .fad {
     font-family: 'Font Awesome 6 Free', 'Font Awesome 6 Brands', 'FontAwesome', Arial, sans-serif !important;
     font-weight: 900 !important;
     font-style: normal !important;
 }
-/* Efectos visuales para modo hacker: reemplaza morado por negro/verde */
 .hacker-theme .service-card,
 .hacker-theme .project-card,
 .hacker-theme .contact-card,

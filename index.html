@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio Next-Level | Ingeniero de Sistemas</title>
+    <title>Portafolio Alejandro CJ | Ingeniero de Sistemas</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body class="dark-theme">
-    <!-- El resto del código HTML permanece igual -->
+    <!-- Fondo con efecto Matrix -->
     <div class="matrix-bg"></div>
     <div class="particles" id="particles"></div>
     <div class="glow-effect"></div>
     <div class="glow-effect"></div>
 
-    <!-- Header -->
+    <!-- Cabecera -->
     <header id="header">
         <div class="container">
             <nav class="navbar">
@@ -37,7 +38,7 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Sección Hero/Inicio -->
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
@@ -45,12 +46,12 @@
                     <h1>HOLA, SOY <span class="hacker-accent">INGENIERO DE SISTEMAS</span></h1>
                     <p>Especialista en desarrollo de software con pasión por crear soluciones innovadoras y eficientes. Combinando creatividad y tecnología para construir el futuro digital.</p>
                     <div class="social-links">
-                        <a href="https://github.com/AlejandrO11102003" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="mailto:alejandrocastillojara30@gmail.com" target="_blank"><i class="far fa-envelope"></i></a>
-                        <a href="https://www.facebook.com/alejandrocastillojara/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.tiktok.com/@alejandrocasti777" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://github.com/AlejandrO11102003" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="mailto:alejandrocastillojara30@gmail.com" target="_blank" rel="noopener" aria-label="Correo Electrónico"><i class="far fa-envelope"></i></a>
+                        <a href="https://www.facebook.com/alejandrocastillojara/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@alejandrocasti777" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
                     </div>
-                    <div style="margin-top: 40px;">
+                    <div class="hero-buttons-container">
                         <a href="#contact" class="btn pulse">CONTÁCTAME</a>
                         <a href="#projects" class="btn btn-outline pulse">VER PROYECTOS</a>
                     </div>
@@ -64,7 +65,7 @@
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- Sección Sobre Mí -->
     <section class="section" id="about">
         <div class="container">
             <div class="section-title">
@@ -109,7 +110,7 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- Sección Habilidades -->
     <section class="section" id="skills">
         <div class="container">
             <div class="section-title">
@@ -123,7 +124,7 @@
                     </div>
                     <h3><span class="hacker-accent">LENGUAJES</span></h3>
                     <p>  Desarrollo de aplicaciones robustas y eficientes.</p>
-                    <div class="skills-list" style="margin-top: 20px;">
+                    <div class="skills-list language-skills-list">
                         <div class="skill-item">
                             <i class="fab fa-js"></i> JavaScript
                         </div>
@@ -147,7 +148,7 @@
                     </div>
                     <h3><span class="hacker-accent">BASES DE DATOS</span></h3>
                     <p>Experiencia en diseño, implementación y optimización de bases de datos relacionales y NoSQL.</p>
-                    <div class="skills-list" style="margin-top: 20px;">
+                    <div class="skills-list database-skills-list">
                         <div class="skill-item">
                             <i class="fas fa-database"></i> MySQL
                         </div>
@@ -171,7 +172,7 @@
                     </div>
                     <h3><span class="hacker-accent">FRAMEWORKS</span></h3>
                     <p>Desarrollo de aplicaciones modernas utilizando los frameworks más populares del mercado.</p>
-                    <div class="skills-list" style="margin-top: 20px;">
+                    <div class="skills-list framework-skills-list">
                         <div class="skill-item">
                             <i class="fab fa-react"></i> React
                         </div>
@@ -195,7 +196,7 @@
                     </div>
                     <h3><span class="hacker-accent">HERRAMIENTAS</span></h3>
                     <p>Plataformas y tecnologías que utilizo para mejorar el flujo de trabajo y despliegue.</p>
-                    <div class="skills-list" style="margin-top: 20px;">
+                    <div class="skills-list tools-skills-list">
                         <div class="skill-item">
                             <i class="fab fa-git-alt"></i> Git
                         </div>
@@ -217,7 +218,7 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Sección Proyectos -->
     <section class="section" id="projects">
         <div class="container">
             <div class="section-title">
@@ -225,7 +226,7 @@
                 <p>Algunos de los proyectos destacados que he desarrollado</p>
             </div>
             <div class="projects-grid">
-                <!-- Proyecto 1 -->
+                <!-- Proyecto 1: Sistema de Gestión de Negocio -->
                 <div class="project-card">
                     <div class="project-image">
                         <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Sistema de Gestión de Negocio">
@@ -240,13 +241,13 @@
                             <span class="tech-item">JWT</span>
                         </div>
                         <div class="project-links">
-                            <a href="#contact" class="btn btn-outline">
+                            <a href="#contact" class="btn btn-outline" aria-label="Solicitar información sobre Sistema de Gestión de Negocio">
                                 <i class="fas fa-envelope"></i> Solicitar información
                             </a>
                         </div>
                     </div>
                 </div>
-                <!-- Proyecto 2 -->
+                <!-- Proyecto 2: Sistema de Ventas Automotriz -->
                 <div class="project-card">
                     <div class="project-image">
                         <img src="img/dashboard-ACJ_TALLER.png" alt="Gestión de Concesionaria">
@@ -262,13 +263,13 @@
                             <span class="tech-item">APACHE</span>
                         </div>
                         <div class="project-links">
-                            <a href="#contact" class="btn btn-outline">
+                            <a href="#contact" class="btn btn-outline" aria-label="Solicitar información sobre Sistema de Ventas Automotriz">
                                 <i class="fas fa-envelope"></i> Solicitar información
                             </a>
                         </div>
                     </div>
                 </div>
-                <!-- Proyecto 3 -->
+                <!-- Proyecto 3: Gestión Empresarial -->
                 <div class="project-card">
                     <div class="project-image">
                         <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Gestión Empresarial">
@@ -283,7 +284,7 @@
                             <span class="tech-item">REACT</span>
                         </div>
                         <div class="project-links">
-                            <a href="#contact" class="btn btn-outline">
+                            <a href="#contact" class="btn btn-outline" aria-label="Solicitar información sobre Gestión Empresarial">
                                 <i class="fas fa-envelope"></i> Solicitar información
                             </a>
                         </div>
@@ -293,7 +294,7 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Sección Contacto -->
     <section class="section" id="contact">
         <div class="container">
             <div class="section-title">
@@ -346,7 +347,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Pie de página -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -359,10 +360,10 @@
                     <li><a href="#contact">CONTACTO</a></li>
                 </ul>
                 <div class="footer-social">
-                    <a href="https://github.com/AlejandrO11102003" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="mailto:alejandrocastillojara30@gmail.com" target="_blank"><i class="far fa-envelope"></i></a>
-                    <a href="https://www.facebook.com/alejandrocastillojara/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.tiktok.com/@alejandrocasti777" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://github.com/AlejandrO11102003" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="mailto:alejandrocastillojara30@gmail.com" target="_blank" rel="noopener" aria-label="Correo Electrónico"><i class="far fa-envelope"></i></a>
+                    <a href="https://www.facebook.com/alejandrocastillojara/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.tiktok.com/@alejandrocasti777" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
                 </div>
                 <p class="copyright">© 2025 ALCJ. TODOS LOS DERECHOS RESERVADOS.</p>
             </div>
@@ -370,7 +371,7 @@
     </footer>
 
     <script>
-        // Mobile Menu Toggle
+        // Toggle para menú móvil
         const hamburger = document.querySelector('.hamburger');
         const navLinks = document.querySelector('.nav-links');
         
@@ -379,7 +380,7 @@
             hamburger.querySelector('i').classList.toggle('fa-times');
         });
         
-        // Close menu when clicking on a link
+        // Cerrar menú al hacer clic en un enlace
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
@@ -387,15 +388,17 @@
             });
         });
         
-        // Header scroll effect
+        // Efecto de scroll en la cabecera
         const header = document.getElementById('header');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 100) {
-                header
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
             }
         });
         
-        // Smooth scrolling for anchor links
+        // Scroll suave para enlaces de anclaje
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -412,38 +415,54 @@
             });
         });
         
-        // Form submission
+        // Envío de formulario
+        emailjs.init("66A7D5AoKjQl0oshn");
+
         const contactForm = document.getElementById('formContact');
-        
+
         if (contactForm) {
             contactForm.addEventListener('submit', function(e) {
                 e.preventDefault();
-                
-                // Get form values
+
                 const name = document.getElementById('name').value;
                 const email = document.getElementById('email').value;
                 const subject = document.getElementById('subject').value;
                 const message = document.getElementById('message').value;
-                
-                // Here you would typically send the form data to a server
-                // For this example, we'll just log it and show an alert
-                console.log({ name, email, subject, message });
-                
-                // Show success message
+
                 const submitBtn = document.querySelector('.submit-btn');
-                submitBtn.innerHTML = '<i class="fas fa-check"></i> MENSAJE ENVIADO';
-                submitBtn.style.background = 'linear-gradient(45deg, #4CAF50, #8BC34A)';
-                
-                // Reset form after 2 seconds
-                setTimeout(() => {
-                    contactForm.reset();
-                    submitBtn.innerHTML = 'ENVIAR MENSAJE';
-                    submitBtn.style.background = 'linear-gradient(45deg, var(--primary-color), var(--secondary-color))';
-                }, 2000);
+
+                const templateParams = {
+                    name: name, // Cambiado de from_name a name
+                    email: email, // Cambiado de from_email a email
+                    to_name: 'Alejandro',
+                    title: subject, // Cambiado de subject a title
+                    message: message,
+                    time: new Date().toLocaleString()
+                };
+
+                emailjs.send('service_mi8l7ox', 'template_z9x3l7d', templateParams)
+                    .then((response) => {
+                        console.log('SUCCESS!', response.status, response.text);
+                        submitBtn.innerHTML = '<i class="fas fa-check"></i> MENSAJE ENVIADO';
+                        submitBtn.style.background = 'linear-gradient(45deg, #4CAF50, #8BC34A)';
+                        setTimeout(() => {
+                            contactForm.reset();
+                            submitBtn.innerHTML = 'ENVIAR MENSAJE';
+                            submitBtn.style.background = 'linear-gradient(45deg, var(--primary-color), var(--secondary-color))';
+                        }, 2000);
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                        submitBtn.innerHTML = '<i class="fas fa-times"></i> ERROR AL ENVIAR';
+                        submitBtn.style.background = 'linear-gradient(45deg, #f44336, #e57373)';
+                        setTimeout(() => {
+                            submitBtn.innerHTML = 'ENVIAR MENSAJE';
+                            submitBtn.style.background = 'linear-gradient(45deg, var(--primary-color), var(--secondary-color))';
+                        }, 2000);
+                    });
             });
         }
         
-        // Create particles for background
+        // Crear partículas para el fondo
         function createParticles() {
             const particlesContainer = document.getElementById('particles');
             const particleCount = 50;
@@ -452,30 +471,30 @@
                 const particle = document.createElement('div');
                 particle.classList.add('particle');
                 
-                // Random size between 1px and 3px
+                // Tamaño aleatorio entre 1px y 3px
                 const size = Math.random() * 2 + 1;
                 particle.style.width = `${size}px`;
                 particle.style.height = `${size}px`;
                 
-                // Random position
+                // Posición aleatoria
                 particle.style.left = `${Math.random() * 100}%`;
                 particle.style.top = `${Math.random() * 100 + 100}%`;
                 
-                // Random animation duration between 10s and 20s
+                // Duración aleatoria de animación entre 10s y 20s
                 const duration = Math.random() * 10 + 10;
                 particle.style.animationDuration = `${duration}s`;
                 
-                // Random delay
+                // Retardo aleatorio
                 particle.style.animationDelay = `${Math.random() * 5}s`;
                 
                 particlesContainer.appendChild(particle);
             }
         }
         
-        // Initialize particles
+        // Inicializar partículas
         createParticles();
         
-        // Animation on scroll
+        // Animación al hacer scroll
         const animateOnScroll = () => {
             const elements = document.querySelectorAll('.service-card, .project-card, .contact-card, .about-image-container, .hero-text, .hero-image-container');
             
@@ -489,7 +508,8 @@
                 }
             });
         };
-        // Set initial state for animated elements
+        
+        // Establecer estado inicial para elementos animados
         document.querySelectorAll('.service-card, .project-card, .contact-card, .about-image-container').forEach(element => {
             element.style.opacity = '0';
             element.style.transform = 'translateY(30px)';
@@ -500,7 +520,8 @@
             element.style.transform = 'translateY(50px)';
             element.style.transition = 'all 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s';
         });
-        // Run once on page load
+        
+        // Ejecutar una vez al cargar la página
         setTimeout(() => {
             animateOnScroll();
             document.querySelectorAll('.hero-text, .hero-image-container').forEach(element => {
@@ -508,9 +529,11 @@
                 element.style.transform = 'translateY(0)';
             });
         }, 300);
-        // Run on scroll
+        
+        // Ejecutar al hacer scroll
         window.addEventListener('scroll', animateOnScroll);
-        // Add pulse animation to buttons
+        
+        // Añadir animación de pulso a botones
         const pulseButtons = document.querySelectorAll('.pulse');
         pulseButtons.forEach(button => {
             button.addEventListener('mouseenter', () => {
@@ -520,7 +543,8 @@
                 button.classList.remove('pulse-animate');
             });
         });
-        // Add keyframe for pulse animation
+        
+        // Añadir keyframe para animación de pulso
         const style = document.createElement('style');
         style.textContent = `
             @keyframes pulse {
@@ -539,7 +563,8 @@
             }
         `;
         document.head.appendChild(style);
-        // Theme switcher con panel de 4 botones
+        
+        // Selector de temas con panel de 4 botones
         const themes = [
             { name: 'oscuro', class: 'dark-theme', icon: '<i class="fas fa-moon"></i>', label: 'Oscuro' },
             { name: 'claro', class: 'light-theme', icon: '<i class="fas fa-sun"></i>', label: 'Claro' },
@@ -547,6 +572,7 @@
             { name: 'hacker', class: 'hacker-theme', icon: '<i class="fas fa-terminal"></i>', label: 'Hacker' }
         ];
         let currentTheme = 0;
+        
         // Crear el panel contenedor para los botones de tema
         const themePanel = document.createElement('div');
         themePanel.style.position = 'fixed';
@@ -560,6 +586,7 @@
         themePanel.style.borderRadius = '15px';
         themePanel.style.zIndex = '1000';
         themePanel.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.3)';
+        
         // Crear los botones para cada tema
         themes.forEach((theme, index) => {
             const themeButton = document.createElement('div');
@@ -629,7 +656,7 @@
         
         document.body.appendChild(themePanel);
         
-        // Typewriter effect for hero text
+        // Efecto máquina de escribir para texto hero
         const typewriter = (element, text, speed) => {
             let i = 0;
             const interval = setInterval(() => {
@@ -642,8 +669,7 @@
             }, speed);
         };
         
-
-        // Matrix background para modo hacker y gamer
+        // Fondo Matrix para modo hacker y gamer
         let matrixCanvas = null;
         function startMatrixBg(colors = ['#00ff41']) {
             if (!matrixCanvas) {
@@ -651,35 +677,45 @@
                 matrixCanvas.className = 'hacker-matrix-bg';
                 document.body.appendChild(matrixCanvas);
             }
+            
             // Cambia la clase según el tema
             matrixCanvas.className = document.body.classList.contains('gamer-theme') ? 'gamer-matrix-bg' : 'hacker-matrix-bg';
+            
             const ctx = matrixCanvas.getContext('2d');
             let width = window.innerWidth;
             let height = window.innerHeight;
             matrixCanvas.width = width;
             matrixCanvas.height = height;
+            
             const fontSize = 18;
             const columns = Math.floor(width / fontSize);
             const drops = Array(columns).fill(1);
-            const chars = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズヅブプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッンABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-=_+[]{}\\|;:\'",.<>/?';
+            
             function draw() {
                 ctx.fillStyle = document.body.classList.contains('gamer-theme') ? 'rgba(10,0,32,0.08)' : 'rgba(16,16,16,0.08)';
                 ctx.fillRect(0, 0, width, height);
+                
                 ctx.font = fontSize + 'px Orbitron, Consolas, monospace';
+                
                 for (let i = 0; i < drops.length; i++) {
                     const text = chars[Math.floor(Math.random() * chars.length)];
                     // Color aleatorio de la paleta
                     ctx.fillStyle = colors[Math.floor(Math.random() * colors.length)];
                     ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+                    
                     if (drops[i] * fontSize > height && Math.random() > 0.975) {
                         drops[i] = 0;
                     }
+                    
                     drops[i]++;
                 }
             }
+            
             matrixCanvas.style.display = 'block';
             if (matrixCanvas._interval) clearInterval(matrixCanvas._interval);
             matrixCanvas._interval = setInterval(draw, 50);
+            
             window.addEventListener('resize', () => {
                 width = window.innerWidth;
                 height = window.innerHeight;
@@ -687,12 +723,14 @@
                 matrixCanvas.height = height;
             });
         }
+        
         function stopMatrixBg() {
             if (matrixCanvas) {
                 matrixCanvas.style.display = 'none';
                 if (matrixCanvas._interval) clearInterval(matrixCanvas._interval);
             }
         }
+        
         // Cambiar matrix bg según tema
         function updateMatrixBg() {
             if (document.body.classList.contains('hacker-theme')) {
@@ -701,11 +739,7 @@
                 stopMatrixBg();
             }
         }
-        // Ya no necesitamos este listener adicional porque
-        // updateMatrixBg se llama dentro de la función changeTheme
-        // Llama al cargar
-        updateMatrixBg();
-
+        
         // Función para asegurar que los iconos sean visibles en el tema gamer
         function updateGamerIcons() {
             if (document.body.classList.contains('gamer-theme')) {
@@ -719,13 +753,10 @@
                     icon.style.fontWeight = '900';
                     icon.style.fontStyle = 'normal';
                     icon.style.opacity = '1';
-                    // Eliminar el truco de quitar y poner la clase
                 });
             }
         }
-        // Llama al cargar
-        updateGamerIcons();
-
+        
         // Mostrar/ocultar fondos según tema
         function updateBackgrounds() {
             // Fondos animados clásicos solo para hacker
@@ -742,9 +773,6 @@
                 glowEffects.forEach(e => e.style.display = 'none');
             }
         }
-        // Ya no necesitamos este listener adicional porque
-        // updateBackgrounds se llama dentro de la función changeTheme
-        updateBackgrounds();
     </script>
 </body>
 </html>

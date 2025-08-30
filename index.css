@@ -75,7 +75,7 @@ body {
     }
 }
 
-/* Glow effect por defecto (morado) */
+/* Glow effect por defecto morado xd*/
 .glow-effect {
     position: fixed;
     width: 300px;
@@ -1279,13 +1279,15 @@ footer::before {
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
+
     .hero-content, .about-content, .contact-container {
         flex-direction: column;
     }
 
     .hero-text, .about-text {
         padding-right: 0;
+        padding-top: 20px;
         margin-bottom: 60px;
     }
 
@@ -1328,7 +1330,7 @@ footer::before {
     }
 
     .section {
-        padding: 100px 0;
+        padding: 50px;
     }
 
     .projects-grid {
@@ -1337,7 +1339,8 @@ footer::before {
     }
 
     .hero {
-        padding-top: 80px;
+        padding-top: 650px;
+        padding-bottom: 600px;
     }
 
     .hero-content {
@@ -1473,6 +1476,11 @@ footer::before {
     font-family: var(--font-tech) !important;
     color: var(--primary-color) !important;
     text-shadow: 0 0 10px rgba(0,0,0,0.1) !important;
+}
+.light-theme .hacker-accent {
+    color: #111111 !important;
+    text-shadow: 0 0 8px #000000, 0 0 2px #000000;
+    font-weight: bold;
 }
 .light-theme .service-card,
 .light-theme .project-card,
